@@ -77,13 +77,13 @@ const RatingPromptDialog = ({
           sx={{
             fontSize: { xs: 36, sm: 56 },
             color: isActive
-              ? "#D4AF37"
+              ? "#2D6A4F"
               : isHovered
-                ? "rgba(212, 175, 55, 0.6)"
+                ? "rgba(45, 106, 79, 0.6)"
                 : "rgba(0, 0, 0, 0.15)",
             transition: "all 0.2s ease",
             filter: shouldGlow
-              ? "drop-shadow(0 4px 12px rgba(212, 175, 55, 0.4))"
+              ? "drop-shadow(0 4px 12px rgba(45, 106, 79, 0.4))"
               : "none",
             "&:hover": {
               transform: "scale(1.1)",
@@ -99,7 +99,7 @@ const RatingPromptDialog = ({
               transform: "translate(-50%, -50%)",
               width: "100%",
               height: "100%",
-              background: `radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%)`,
+              background: `radial-gradient(circle, rgba(45, 106, 79, 0.3) 0%, transparent 70%)`,
               borderRadius: "50%",
               pointerEvents: "none",
               animation: "pulse 2s infinite",
@@ -146,8 +146,8 @@ const RatingPromptDialog = ({
       <Box
         sx={{
           background:
-            "linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%)",
-          borderBottom: "1px solid rgba(212, 175, 55, 0.2)",
+            "linear-gradient(135deg, rgba(45, 106, 79, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%)",
+          borderBottom: "1px solid rgba(45, 106, 79, 0.2)",
           p: { xs: 2, sm: 3 },
           pb: { xs: 1.5, sm: 2 },
         }}
@@ -174,7 +174,7 @@ const RatingPromptDialog = ({
           >
             <RateReviewIcon
               sx={{
-                color: "#D4AF37",
+                color: "#2D6A4F",
                 fontSize: { xs: 24, sm: 32 },
                 display: { xs: "none", sm: "block" },
               }}
@@ -184,7 +184,7 @@ const RatingPromptDialog = ({
                 variant="h6"
                 sx={{
                   fontWeight: 700,
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -202,7 +202,7 @@ const RatingPromptDialog = ({
                   display: { xs: "none", sm: "block" },
                 }}
               >
-                Help us improve TuVibe
+                Help us improve Mcaludoh Consultancy
               </Typography>
             </Box>
           </Box>
@@ -211,8 +211,8 @@ const RatingPromptDialog = ({
             sx={{
               color: "rgba(0, 0, 0, 0.6)",
               "&:hover": {
-                backgroundColor: "rgba(212, 175, 55, 0.1)",
-                color: "#D4AF37",
+                backgroundColor: "rgba(45, 106, 79, 0.1)",
+                color: "#2D6A4F",
               },
               transition: "all 0.2s ease",
             }}
@@ -244,7 +244,7 @@ const RatingPromptDialog = ({
             textAlign: "center",
           }}
         >
-          We'd love to hear what you think about TuVibe. Your feedback helps us
+          We'd love to hear what you think about Mcaludoh Consultancy. Your feedback helps us
           improve the experience for everyone.
         </Typography>
 
@@ -253,8 +253,8 @@ const RatingPromptDialog = ({
             <Paper
               elevation={0}
               sx={{
-                backgroundColor: "rgba(212, 175, 55, 0.08)",
-                border: "1px solid rgba(212, 175, 55, 0.3)",
+                backgroundColor: "rgba(45, 106, 79, 0.08)",
+                border: "1px solid rgba(45, 106, 79, 0.3)",
                 borderRadius: 2,
                 p: { xs: 1.5, sm: 2 },
                 mb: { xs: 2, sm: 3 },
@@ -272,7 +272,7 @@ const RatingPromptDialog = ({
                 <FavoriteIcon
                   sx={{
                     fontSize: { xs: 14, sm: 16 },
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                     verticalAlign: "middle",
                     mr: 0.5,
                   }}
@@ -363,12 +363,12 @@ const RatingPromptDialog = ({
                   rating > 0 ? `${rating} - ${getRatingLabel(rating)}` : ""
                 }
                 sx={{
-                  backgroundColor: "rgba(212, 175, 55, 0.15)",
-                  color: "#B8941F",
+                  backgroundColor: "rgba(45, 106, 79, 0.15)",
+                  color: "#1B4332",
                   fontWeight: 600,
                   fontSize: { xs: "0.75rem", sm: "0.875rem" },
                   height: { xs: 28, sm: 32 },
-                  border: "1px solid rgba(212, 175, 55, 0.3)",
+                  border: "1px solid rgba(45, 106, 79, 0.3)",
                   "& .MuiChip-label": {
                     px: { xs: 1.5, sm: 2 },
                   },
@@ -385,7 +385,7 @@ const RatingPromptDialog = ({
           maxRows={4}
           fullWidth
           label="Share your experience (optional)"
-          placeholder="Tell us what you love about TuVibe or how we can improve..."
+          placeholder="Tell us what you love about Mcaludoh Consultancy or how we can improve..."
           value={testimonial}
           onChange={(e) => {
             if (e.target.value.length <= 500) {
@@ -402,24 +402,24 @@ const RatingPromptDialog = ({
                 backgroundColor: "rgba(0, 0, 0, 0.04)",
               },
               "&.Mui-focused": {
-                backgroundColor: "rgba(212, 175, 55, 0.05)",
-                borderColor: "#D4AF37",
+                backgroundColor: "rgba(45, 106, 79, 0.05)",
+                borderColor: "#2D6A4F",
               },
               "& fieldset": {
                 borderColor: "rgba(0, 0, 0, 0.15)",
               },
               "&:hover fieldset": {
-                borderColor: "rgba(212, 175, 55, 0.5)",
+                borderColor: "rgba(45, 106, 79, 0.5)",
               },
               "&.Mui-focused fieldset": {
-                borderColor: "#D4AF37",
+                borderColor: "#2D6A4F",
                 borderWidth: "2px",
               },
             },
             "& .MuiInputLabel-root": {
               color: "rgba(0, 0, 0, 0.6)",
               "&.Mui-focused": {
-                color: "#D4AF37",
+                color: "#2D6A4F",
               },
             },
           }}
@@ -482,17 +482,17 @@ const RatingPromptDialog = ({
             width: { xs: "100%", sm: "auto" },
             background:
               rating > 0
-                ? "linear-gradient(90deg, #D4AF37 0%, #B8941F 100%)"
+                ? "linear-gradient(90deg, #2D6A4F 0%, #1B4332 100%)"
                 : "rgba(0, 0, 0, 0.2)",
             boxShadow:
-              rating > 0 ? "0 8px 20px rgba(212, 175, 55, 0.4)" : "none",
+              rating > 0 ? "0 8px 20px rgba(45, 106, 79, 0.4)" : "none",
             "&:hover": {
               background:
                 rating > 0
-                  ? "linear-gradient(90deg, #B8941F 0%, #D4AF37 100%)"
+                  ? "linear-gradient(90deg, #1B4332 0%, #2D6A4F 100%)"
                   : "rgba(0, 0, 0, 0.2)",
               boxShadow:
-                rating > 0 ? "0 12px 28px rgba(212, 175, 55, 0.5)" : "none",
+                rating > 0 ? "0 12px 28px rgba(45, 106, 79, 0.5)" : "none",
               transform: rating > 0 ? "translateY(-2px)" : "none",
             },
             "&:disabled": {

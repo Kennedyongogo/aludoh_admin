@@ -62,7 +62,7 @@ const PostDetail = ({ user: userProp }) => {
             icon: "error",
             title: "Post Not Found",
             text: data.message || "The post you're looking for doesn't exist",
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
           }).then(() => {
             navigate("/home");
           });
@@ -74,7 +74,7 @@ const PostDetail = ({ user: userProp }) => {
           icon: "error",
           title: "Error",
           text: "Failed to load post. Please try again.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         }).then(() => {
           navigate("/home");
         });
@@ -99,14 +99,14 @@ const PostDetail = ({ user: userProp }) => {
   };
 
   const getPostTitle = () => {
-    if (!post) return "Post on Tuvibe";
+    if (!post) return "Post on Mcaludoh Consultancy";
     const authorName = post.user?.name || "Someone";
-    return `${authorName}'s post on Tuvibe`;
+    return `${authorName}'s post on Mcaludoh Consultancy`;
   };
 
   const getPostDescription = () => {
-    if (!post) return "Check out this post on Tuvibe";
-    return post.caption || "Check out this post on Tuvibe";
+    if (!post) return "Check out this post on Mcaludoh Consultancy";
+    return post.caption || "Check out this post on Mcaludoh Consultancy";
   };
 
   const getPostImage = () => {
@@ -161,7 +161,7 @@ const PostDetail = ({ user: userProp }) => {
         <meta property="og:image" content={getPostImage()} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Tuvibe" />
+        <meta property="og:site_name" content="Mcaludoh Consultancy" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

@@ -32,8 +32,8 @@ export default function Pricing() {
         backgroundImage:
           "linear-gradient(135deg, rgba(255, 248, 220, 0.98) 0%, rgba(255, 236, 179, 0.95) 100%)",
         backdropFilter: "blur(20px)",
-        boxShadow: "0 20px 60px rgba(212, 175, 55, 0.3)",
-        border: "2px solid rgba(212, 175, 55, 0.3)",
+        boxShadow: "0 20px 60px rgba(45, 106, 79, 0.3)",
+        border: "2px solid rgba(45, 106, 79, 0.3)",
         width: "100%",
         maxWidth: "900px",
         margin: "0 auto",
@@ -51,7 +51,7 @@ export default function Pricing() {
         <Typography
           variant="h4"
           sx={{
-            background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+            background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -72,7 +72,7 @@ export default function Pricing() {
             scrollButtons="auto"
             sx={{
               "& .MuiTabs-indicator": {
-                backgroundColor: "#D4AF37",
+                backgroundColor: "#2D6A4F",
                 height: 3,
                 borderRadius: "3px 3px 0 0",
               },
@@ -84,11 +84,11 @@ export default function Pricing() {
                 minHeight: { xs: 48, sm: 56 },
                 px: { xs: 1.5, sm: 2, md: 3 },
                 "&:hover": {
-                  color: "#D4AF37",
-                  backgroundColor: "rgba(212, 175, 55, 0.08)",
+                  color: "#2D6A4F",
+                  backgroundColor: "rgba(45, 106, 79, 0.08)",
                 },
                 "&.Mui-selected": {
-                  color: "#D4AF37",
+                  color: "#2D6A4F",
                   fontWeight: 700,
                 },
               },
@@ -106,7 +106,7 @@ export default function Pricing() {
             borderRadius: "16px",
             backgroundColor: "rgba(255, 255, 255, 0.6)",
             backdropFilter: "blur(10px)",
-            border: "1px solid rgba(212, 175, 55, 0.2)",
+            border: "1px solid rgba(45, 106, 79, 0.2)",
             p: { xs: 2, sm: 3, md: 4 },
             minHeight: "200px",
             transition: "all 0.3s ease",

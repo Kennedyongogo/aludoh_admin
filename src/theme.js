@@ -3,14 +3,15 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#D4AF37", // Gold as primary color
-      light: "#E8D5A3", // Light gold/pastel gold
-      dark: "#B8941F", // Darker gold
+      main: "#2D6A4F",
+      light: "#52B788",
+      dark: "#1B4332",
+      contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#F5E6D3", // Pastel peach/beige
-      light: "#FAF5F0", // Very light pastel
-      dark: "#E8D5C4", // Darker pastel
+      main: "#D8F3DC",
+      light: "#F7F4EC",
+      dark: "#B7E4C7",
     },
     info: {
       main: "#B8A9D9", // Pastel lavender
@@ -36,12 +37,13 @@ const theme = createTheme({
       primary: "#2C2C2C", // Dark gray for text
       secondary: "#666666", // Medium gray for secondary text
     },
-    // Custom colors for TuVibe
-    gold: {
-      main: "#D4AF37",
-      light: "#E8D5A3",
-      dark: "#B8941F",
-      pastel: "#F5E6D3",
+    green: {
+      deep: "#1B4332",
+      main: "#2D6A4F",
+      mid: "#40916C",
+      light: "#52B788",
+      mist: "#D8F3DC",
+      cream: "#F7F4EC",
     },
     pastel: {
       lavender: "#B8A9D9",

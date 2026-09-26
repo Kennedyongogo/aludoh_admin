@@ -301,7 +301,7 @@ const PostCard = ({
           icon: "error",
           title: "Login Required",
           text: "Please login to react to posts",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -331,7 +331,7 @@ const PostCard = ({
           icon: "error",
           title: "Error",
           text: errorMessage,
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -583,7 +583,7 @@ const PostCard = ({
           icon: "error",
           title: "Login Required",
           text: "Please login to comment",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
           zIndex: 1400, // Higher than Material-UI Dialog (1300)
         });
         return;
@@ -646,7 +646,7 @@ const PostCard = ({
           text: parentCommentId 
             ? "Your reply has been posted successfully" 
             : "Your comment has been posted successfully",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
           timer: 2000,
           showConfirmButton: false,
         });
@@ -657,7 +657,7 @@ const PostCard = ({
           icon: "error",
           title: "Error",
           text: data.message || "Failed to add comment",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
           zIndex: 1400, // Higher than Material-UI Dialog (1300)
         });
       }
@@ -667,7 +667,7 @@ const PostCard = ({
         icon: "error",
         title: "Error",
         text: err.message || "Failed to add comment. Please try again.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
         zIndex: 1400, // Higher than Material-UI Dialog (1300)
       });
     } finally {
@@ -691,7 +691,7 @@ const PostCard = ({
           icon: "error",
           title: "Login Required",
           text: "Please login to react",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -815,7 +815,7 @@ const PostCard = ({
         icon: "success",
         title: "Link copied!",
         text: "Post link has been copied to clipboard",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
         timer: 2000,
         showConfirmButton: false,
       });
@@ -825,7 +825,7 @@ const PostCard = ({
         icon: "error",
         title: "Error",
         text: "Failed to copy link. Please try again.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
     }
   };
@@ -834,8 +834,8 @@ const PostCard = ({
     try {
       const postUrl = getPostUrl();
       let shareData = {
-        title: `${post.user?.name || "Someone"}'s post on Tuvibe`,
-        text: post.caption || "Check out this post on Tuvibe",
+        title: `${post.user?.name || "Someone"}'s post on Mcaludoh Consultancy`,
+        text: post.caption || "Check out this post on Mcaludoh Consultancy",
         url: postUrl,
       };
 
@@ -882,8 +882,8 @@ const PostCard = ({
 
   const handleSocialShare = async (platform) => {
     const postUrl = encodeURIComponent(getPostUrl());
-    const text = encodeURIComponent(post.caption || "Check out this post on Tuvibe");
-    const title = encodeURIComponent(`${post.user?.name || "Someone"}'s post on Tuvibe`);
+    const text = encodeURIComponent(post.caption || "Check out this post on Mcaludoh Consultancy");
+    const title = encodeURIComponent(`${post.user?.name || "Someone"}'s post on Mcaludoh Consultancy`);
 
     let shareUrl = "";
     switch (platform) {
@@ -914,7 +914,7 @@ const PostCard = ({
         icon: "info",
         title: "Post Pending Approval",
         text: "You can share this post once it's approved",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
       return;
     }
@@ -935,7 +935,7 @@ const PostCard = ({
         sx={{
           mb: 2,
           borderRadius: "16px",
-          border: "1px solid rgba(212, 175, 55, 0.2)",
+          border: "1px solid rgba(45, 106, 79, 0.2)",
         }}
       >
         <CardContent sx={{ pb: 1 }}>
@@ -957,7 +957,7 @@ const PostCard = ({
                   {post.user?.name || "Anonymous"}
                 </Typography>
                 {post.user?.isVerified && (
-                  <Verified sx={{ fontSize: 16, color: "#D4AF37" }} />
+                  <Verified sx={{ fontSize: 16, color: "#2D6A4F" }} />
                 )}
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
@@ -1044,7 +1044,7 @@ const PostCard = ({
                 justifyContent: "center",
                 p: 3,
                 background: getBackgroundColor(),
-                border: "2px solid rgba(212, 175, 55, 0.3)",
+                border: "2px solid rgba(45, 106, 79, 0.3)",
               }}
             >
               <Typography
@@ -1096,7 +1096,7 @@ const PostCard = ({
                     }}
                     onClick={handleViewLikes}
                   >
-                    <ThumbUp sx={{ fontSize: 16, color: "#D4AF37" }} />
+                    <ThumbUp sx={{ fontSize: 16, color: "#2D6A4F" }} />
                     <Typography variant="body2" sx={{ fontSize: "0.875rem" }}>
                       {postDetails.like_count}
                     </Typography>
@@ -1150,8 +1150,8 @@ const PostCard = ({
                                 position: "absolute",
                                 top: -6,
                                 right: -6,
-                                backgroundColor: "#D4AF37",
-                                color: "#1a1a1a",
+                                backgroundColor: "#2D6A4F",
+                                color: "#FFFFFF",
                                 borderRadius: "50%",
                                 minWidth: "18px",
                                 height: "18px",
@@ -1207,7 +1207,7 @@ const PostCard = ({
                     icon: "info",
                     title: "Post Pending Approval",
                     text: "You can interact with this post once it's approved",
-                    confirmButtonColor: "#D4AF37",
+                    confirmButtonColor: "#2D6A4F",
                   });
                 }
               }}
@@ -1217,7 +1217,7 @@ const PostCard = ({
                   postDetails.user_reaction &&
                   postDetails.user_reaction.reaction_type === "like" &&
                   !postDetails.user_reaction.emoji
-                    ? "#D4AF37"
+                    ? "#2D6A4F"
                     : "inherit",
                 minWidth: "auto",
                 px: 1,
@@ -1245,7 +1245,7 @@ const PostCard = ({
                     icon: "info",
                     title: "Post Pending Approval",
                     text: "You can interact with this post once it's approved",
-                    confirmButtonColor: "#D4AF37",
+                    confirmButtonColor: "#2D6A4F",
                   });
                 }
               }}
@@ -1263,8 +1263,8 @@ const PostCard = ({
                     position: "absolute",
                     top: -4,
                     right: -4,
-                    bgcolor: "#D4AF37",
-                    color: "#1a1a1a",
+                    bgcolor: "#2D6A4F",
+                    color: "#FFFFFF",
                     borderRadius: "50%",
                     width: 18,
                     height: 18,
@@ -1291,7 +1291,7 @@ const PostCard = ({
                     icon: "info",
                     title: "Post Pending Approval",
                     text: "You can interact with this post once it's approved",
-                    confirmButtonColor: "#D4AF37",
+                    confirmButtonColor: "#2D6A4F",
                   });
                 }
               }}
@@ -1508,8 +1508,8 @@ const PostCard = ({
                 }}
                 disabled={!commentText.trim() || submittingComment}
                 sx={{
-                  bgcolor: "#D4AF37",
-                  "&:hover": { bgcolor: "#B8941F" },
+                  bgcolor: "#2D6A4F",
+                  "&:hover": { bgcolor: "#1B4332" },
                 }}
                 startIcon={
                   submittingComment ? <CircularProgress size={16} /> : <Send />
@@ -1601,7 +1601,7 @@ const PostCard = ({
                             </Typography>
                             {comment.user?.isVerified && (
                               <Verified
-                                sx={{ fontSize: 14, color: "#D4AF37" }}
+                                sx={{ fontSize: 14, color: "#2D6A4F" }}
                               />
                             )}
                           </Box>
@@ -1633,7 +1633,7 @@ const PostCard = ({
                                     sx={{
                                       fontSize: 14,
                                       color: comment.user_reaction
-                                        ? "#D4AF37"
+                                        ? "#2D6A4F"
                                         : "inherit",
                                     }}
                                   />
@@ -1698,8 +1698,8 @@ const PostCard = ({
                                       submittingReply[comment.id]
                                     }
                                     sx={{
-                                      bgcolor: "#D4AF37",
-                                      "&:hover": { bgcolor: "#B8941F" },
+                                      bgcolor: "#2D6A4F",
+                                      "&:hover": { bgcolor: "#1B4332" },
                                     }}
                                     type="button"
                                   >
@@ -1731,7 +1731,7 @@ const PostCard = ({
                                       mb: 1,
                                       pb: 1,
                                       borderLeft:
-                                        "2px solid rgba(212, 175, 55, 0.3)",
+                                        "2px solid rgba(45, 106, 79, 0.3)",
                                       pl: 1,
                                     }}
                                   >
@@ -1781,7 +1781,7 @@ const PostCard = ({
                                               sx={{
                                                 fontSize: 12,
                                                 color: reply.user_reaction
-                                                  ? "#D4AF37"
+                                                  ? "#2D6A4F"
                                                   : "inherit",
                                               }}
                                             />
@@ -1899,7 +1899,7 @@ const PostCard = ({
                             <Typography variant="subtitle2">
                               {reaction.user?.name || "Anonymous"}
                             </Typography>
-                            <ThumbUp sx={{ fontSize: 16, color: "#D4AF37" }} />
+                            <ThumbUp sx={{ fontSize: 16, color: "#2D6A4F" }} />
                           </Box>
                         }
                         secondary={formatDate(reaction.createdAt)}

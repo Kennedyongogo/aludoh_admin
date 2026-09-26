@@ -17,16 +17,9 @@ import Swal from "sweetalert2";
 import { fetchWithTimeout } from "../utils/fetchWithTimeout";
 
 import Navbar from "./Navbar";
-import TuVibe from "../components/TuVibe";
 import Dashboard from "../pages/Dashboard";
-import Profile from "../pages/Profile";
-import Explore from "../pages/Explore";
+import ServiceRequests from "../pages/ServiceRequests";
 import Wallet from "../pages/Wallet";
-import Market from "../pages/Market";
-import Reports from "../pages/Reports";
-import Notifications from "../pages/Notifications";
-import Timeline from "../pages/Timeline";
-import Pricing from "../pages/Pricing";
 import SuspensionGate from "./Suspension/SuspensionGate";
 import SuspensionAppealModal from "./Suspension/SuspensionAppealModal";
 import RatingPromptDialog from "./RatingPromptDialog";
@@ -153,19 +146,19 @@ function PageRoutes() {
       showCancelButton: true,
       confirmButtonText: "Yes, Logout",
       cancelButtonText: "Cancel",
-      confirmButtonColor: "#D4AF37",
+      confirmButtonColor: "#2D6A4F",
       cancelButtonColor: "#666",
       allowOutsideClick: false,
       allowEscapeKey: true,
       customClass: {
-        popup: "swal-popup-gold",
+        popup: "swal-popup-brand",
       },
       didOpen: () => {
         const swal = document.querySelector(".swal2-popup");
         if (swal) {
           swal.style.borderRadius = "20px";
-          swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-          swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+          swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+          swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
         }
       },
     });
@@ -326,9 +319,9 @@ function PageRoutes() {
       });
       Swal.fire({
         title: "Thank you!",
-        text: "Your rating helps us make TuVibe better.",
+        text: "Your rating helps us make Mcaludoh Consultancy better.",
         icon: "success",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
     } catch (error) {
       console.error("[PageRoutes] rating submit failed:", error);
@@ -336,7 +329,7 @@ function PageRoutes() {
         title: "Something went wrong",
         text: error.message || "Failed to submit rating. Please try again.",
         icon: "error",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
     } finally {
       setRatingPromptLoading(false);
@@ -398,39 +391,6 @@ function PageRoutes() {
         prevUserIdRef.current = user.id;
       }
 
-      // Check if user needs to complete profile (missing age/birth_year)
-      // Only check if not already on profile page
-      // Also check localStorage flag set during Google sign-in
-      const needsCompletion =
-        localStorage.getItem("needsProfileCompletion") === "true";
-      const isGoogleUser = user.auth_provider === "google";
-      const missingAge = !user.birth_year && !user.age;
-
-      if (
-        location.pathname !== "/profile" &&
-        missingAge &&
-        (isGoogleUser || needsCompletion)
-      ) {
-        // Clear the flag
-        localStorage.removeItem("needsProfileCompletion");
-        navigate("/profile", { replace: true });
-        // Only show alert if not coming from Google sign-in (to avoid double alerts)
-        if (!needsCompletion) {
-          Swal.fire({
-            icon: "info",
-            title: "Complete Your Profile",
-            text: "Please add your age and phone number to continue using TuVibe.",
-            confirmButtonColor: "#D4AF37",
-          });
-        }
-        return;
-      }
-
-      // Clear the flag if profile is complete
-      if (needsCompletion && !missingAge) {
-        localStorage.removeItem("needsProfileCompletion");
-      }
-
       // Parallelize suspension status and rating prompt checks for faster loading
       Promise.all([fetchSuspensionStatus(false), checkRatingPrompt()]).catch(
         (error) => {
@@ -449,13 +409,7 @@ function PageRoutes() {
       setRatingPromptOpen(false);
       setRatingPromptInfo(null);
     }
-  }, [
-    user,
-    fetchSuspensionStatus,
-    checkRatingPrompt,
-    location.pathname,
-    navigate,
-  ]);
+  }, [user, fetchSuspensionStatus, checkRatingPrompt]);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -622,7 +576,7 @@ function PageRoutes() {
           backgroundColor: "#FAFAFA",
         }}
       >
-        <CircularProgress sx={{ color: "#D4AF37" }} />
+        <CircularProgress sx={{ color: "#2D6A4F" }} />
       </Box>
     );
   }
@@ -640,7 +594,7 @@ function PageRoutes() {
           backgroundColor: "#FAFAFA",
         }}
       >
-        <CircularProgress sx={{ color: "#D4AF37" }} />
+        <CircularProgress sx={{ color: "#2D6A4F" }} />
       </Box>
     );
   }
@@ -649,7 +603,6 @@ function PageRoutes() {
     <Box sx={{ display: "flex" }}>
       <Navbar
         user={user}
-        setUser={setUser}
         isSuspended={Boolean(suspension)}
         onLogout={requestLogout}
       />
@@ -680,24 +633,12 @@ function PageRoutes() {
           />
         ) : (
           <Routes>
-            <Route path="home" element={<Dashboard user={user} />} />
-            <Route path="explore" element={<Explore user={user} />} />
-            <Route path="market" element={<Market user={user} />} />
+            <Route path="home" element={<Dashboard />} />
+            <Route path="service-requests" element={<ServiceRequests />} />
             <Route
               path="wallet"
               element={<Wallet user={user} setUser={setUser} />}
             />
-            <Route
-              path="profile"
-              element={<Profile user={user} setUser={setUser} />}
-            />
-            <Route path="reports" element={<Reports user={user} />} />
-            <Route
-              path="notifications"
-              element={<Notifications user={user} />}
-            />
-            <Route path="timeline" element={<Timeline user={user} />} />
-            <Route path="pricing" element={<Pricing />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         )}

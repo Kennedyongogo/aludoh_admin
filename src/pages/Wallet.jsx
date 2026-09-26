@@ -124,7 +124,7 @@ export default function Wallet({ user, setUser }) {
         icon: "error",
         title: "Missing Email",
         text: "We could not determine your account email. Please re-login and try again.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
       return;
     }
@@ -190,7 +190,7 @@ export default function Wallet({ user, setUser }) {
             <p style="font-size: 0.9em; color: #666; margin-top: 8px;">Equivalent to ${formatKsh(effectiveKsh)}</p>
             <p style="font-size: 0.85em; color: #888; margin-top: 6px;">Reference: <code>${reference}</code></p>
           `,
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -284,7 +284,7 @@ export default function Wallet({ user, setUser }) {
             `,
             timer: 2600,
             showConfirmButton: false,
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
           });
         } catch (verifyError) {
           console.error("verifyPayment error:", verifyError);
@@ -295,7 +295,7 @@ export default function Wallet({ user, setUser }) {
             text:
               verifyError.message ||
               "Something went wrong. Please contact support.",
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
           });
         } finally {
           setPurchasing(false);
@@ -316,7 +316,7 @@ export default function Wallet({ user, setUser }) {
               icon: "info",
               title: "Payment Cancelled",
               text: "You can restart the payment whenever you’re ready.",
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
             });
           }
         },
@@ -335,7 +335,7 @@ export default function Wallet({ user, setUser }) {
         text:
           error.message ||
           "Failed to start Paystack payment. Please try again.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
     }
   };
@@ -397,7 +397,7 @@ export default function Wallet({ user, setUser }) {
         icon: "error",
         title: "Error",
         text: "Failed to load transaction details",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
     }
   };
@@ -439,7 +439,7 @@ export default function Wallet({ user, setUser }) {
                 sx={{
                   fontWeight: 700,
                   fontSize: { xs: "1.25rem", sm: "1.75rem", md: "2.125rem" },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -465,10 +465,10 @@ export default function Wallet({ user, setUser }) {
                     <IconButton
                       onClick={() => navigate("/profile")}
                       sx={{
-                        backgroundColor: "rgba(212, 175, 55, 0.12)",
-                        border: "1px solid rgba(212, 175, 55, 0.3)",
+                        backgroundColor: "rgba(45, 106, 79, 0.12)",
+                        border: "1px solid rgba(45, 106, 79, 0.3)",
                         "&:hover": {
-                          backgroundColor: "rgba(212, 175, 55, 0.22)",
+                          backgroundColor: "rgba(45, 106, 79, 0.22)",
                         },
                         flexShrink: 0,
                         width: { xs: "36px", sm: "40px" },
@@ -478,7 +478,7 @@ export default function Wallet({ user, setUser }) {
                     >
                       <AccountCircle
                         sx={{
-                          color: "#D4AF37",
+                          color: "#2D6A4F",
                           fontSize: { xs: "1.25rem", sm: "1.5rem" },
                         }}
                       />
@@ -509,13 +509,13 @@ export default function Wallet({ user, setUser }) {
         sx={{
           mb: { xs: 1.5, sm: 2, md: 3 },
           borderRadius: "12px",
-          bgcolor: "rgba(212, 175, 55, 0.07)",
-          border: "1px solid rgba(212, 175, 55, 0.25)",
+          bgcolor: "rgba(45, 106, 79, 0.07)",
+          border: "1px solid rgba(45, 106, 79, 0.25)",
           width: "100%",
           maxWidth: "100%",
           boxSizing: "border-box",
           "& .MuiAlert-icon": {
-            color: "#D4AF37",
+            color: "#2D6A4F",
           },
         }}
       >
@@ -546,9 +546,9 @@ export default function Wallet({ user, setUser }) {
           mb: { xs: 1.5, sm: 2, md: 3 },
           borderRadius: "16px",
           background:
-            "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)",
-          border: "2px solid rgba(212, 175, 55, 0.3)",
-          boxShadow: "0 8px 32px rgba(212, 175, 55, 0.15)",
+            "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)",
+          border: "2px solid rgba(45, 106, 79, 0.3)",
+          boxShadow: "0 8px 32px rgba(45, 106, 79, 0.15)",
           width: "100%",
           maxWidth: "100%",
           boxSizing: "border-box",
@@ -570,11 +570,11 @@ export default function Wallet({ user, setUser }) {
               width: { xs: 50, sm: 60, md: 80 },
               height: { xs: 50, sm: 60, md: 80 },
               borderRadius: "50%",
-              background: "linear-gradient(135deg, #D4AF37, #B8941F)",
+              background: "linear-gradient(135deg, #2D6A4F, #1B4332)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "0 4px 20px rgba(212, 175, 55, 0.3)",
+              boxShadow: "0 4px 20px rgba(45, 106, 79, 0.3)",
               flexShrink: 0,
             }}
           >
@@ -601,7 +601,7 @@ export default function Wallet({ user, setUser }) {
                   minHeight: { xs: "1.5rem", sm: "2rem", md: "3rem" },
                 }}
               >
-                <CircularProgress size={24} sx={{ color: "#D4AF37" }} />
+                <CircularProgress size={24} sx={{ color: "#2D6A4F" }} />
               </Box>
             ) : (
               <Typography
@@ -609,7 +609,7 @@ export default function Wallet({ user, setUser }) {
                 sx={{
                   fontWeight: 700,
                   fontSize: { xs: "1.2rem", sm: "2rem", md: "3rem" },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -644,9 +644,9 @@ export default function Wallet({ user, setUser }) {
           mb: { xs: 1.5, sm: 2, md: 3 },
           borderRadius: "16px",
           background:
-            "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)",
-          border: "1px solid rgba(212, 175, 55, 0.2)",
-          boxShadow: "0 4px 20px rgba(212, 175, 55, 0.1)",
+            "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)",
+          border: "1px solid rgba(45, 106, 79, 0.2)",
+          boxShadow: "0 4px 20px rgba(45, 106, 79, 0.1)",
           width: "100%",
           maxWidth: "100%",
           boxSizing: "border-box",
@@ -665,7 +665,7 @@ export default function Wallet({ user, setUser }) {
           }}
         >
           <Add
-            sx={{ fontSize: { xs: "1rem", md: "1.5rem" }, color: "#D4AF37" }}
+            sx={{ fontSize: { xs: "1rem", md: "1.5rem" }, color: "#2D6A4F" }}
           />
           Quick Buy Tokens
         </Typography>
@@ -717,12 +717,12 @@ export default function Wallet({ user, setUser }) {
             sx={{
               minWidth: { xs: "100%", sm: 180 },
               borderRadius: "12px",
-              bgcolor: "#D4AF37",
-              color: "#1a1a1a",
+              bgcolor: "#2D6A4F",
+              color: "#FFFFFF",
               fontWeight: 600,
               textTransform: "none",
               "&:hover": {
-                bgcolor: "#B8941F",
+                bgcolor: "#1B4332",
                 transform: "translateY(-2px)",
               },
               "&:disabled": {
@@ -749,10 +749,10 @@ export default function Wallet({ user, setUser }) {
                 fontWeight: 600,
                 px: 2,
                 py: 0.5,
-                bgcolor: "rgba(212, 175, 55, 0.15)",
-                color: "#B8941F",
+                bgcolor: "rgba(45, 106, 79, 0.15)",
+                color: "#1B4332",
                 "& .MuiChip-icon": {
-                  color: "#D4AF37",
+                  color: "#2D6A4F",
                 },
               }}
             />
@@ -778,13 +778,13 @@ export default function Wallet({ user, setUser }) {
               sx={{
                 p: { xs: 1, sm: 1.5, md: 2 },
                 borderRadius: "12px",
-                borderColor: "rgba(212, 175, 55, 0.5)",
+                borderColor: "rgba(45, 106, 79, 0.5)",
                 color: "#1a1a1a",
                 fontWeight: 600,
                 textTransform: "none",
                 "&:hover": {
-                  borderColor: "#D4AF37",
-                  bgcolor: "rgba(212, 175, 55, 0.1)",
+                  borderColor: "#2D6A4F",
+                  bgcolor: "rgba(45, 106, 79, 0.1)",
                   transform: "translateY(-2px)",
                 },
                 "&:disabled": {
@@ -818,7 +818,7 @@ export default function Wallet({ user, setUser }) {
         </Box>
         {purchasing && (
           <Box sx={{ mt: 2, textAlign: "center" }}>
-            <CircularProgress size={24} sx={{ color: "#D4AF37" }} />
+            <CircularProgress size={24} sx={{ color: "#2D6A4F" }} />
             <Typography
               variant="body2"
               sx={{ mt: 1, color: "rgba(26, 26, 26, 0.7)" }}
@@ -835,9 +835,9 @@ export default function Wallet({ user, setUser }) {
           p: { xs: 1, sm: 2, md: 3 },
           borderRadius: "16px",
           background:
-            "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)",
-          border: "1px solid rgba(212, 175, 55, 0.2)",
-          boxShadow: "0 4px 20px rgba(212, 175, 55, 0.1)",
+            "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)",
+          border: "1px solid rgba(45, 106, 79, 0.2)",
+          boxShadow: "0 4px 20px rgba(45, 106, 79, 0.1)",
           width: "100%",
           maxWidth: "100%",
           boxSizing: "border-box",
@@ -856,14 +856,14 @@ export default function Wallet({ user, setUser }) {
           }}
         >
           <TrendingUp
-            sx={{ fontSize: { xs: "1.2rem", md: "1.5rem" }, color: "#D4AF37" }}
+            sx={{ fontSize: { xs: "1.2rem", md: "1.5rem" }, color: "#2D6A4F" }}
           />
           Transaction History
         </Typography>
 
         {loading ? (
           <Box sx={{ display: "flex", justifyContent: "center", py: 4 }}>
-            <CircularProgress sx={{ color: "#D4AF37" }} />
+            <CircularProgress sx={{ color: "#2D6A4F" }} />
           </Box>
         ) : transactions.length === 0 ? (
           <Box sx={{ textAlign: "center", py: 4 }}>
@@ -967,7 +967,7 @@ export default function Wallet({ user, setUser }) {
                         size="small"
                         variant="outlined"
                         sx={{
-                          borderColor: "rgba(212, 175, 55, 0.3)",
+                          borderColor: "rgba(45, 106, 79, 0.3)",
                           color: "rgba(26, 26, 26, 0.7)",
                           fontSize: { xs: "0.7rem", sm: "0.75rem" },
                           height: { xs: 24, sm: 28 },
@@ -995,14 +995,14 @@ export default function Wallet({ user, setUser }) {
           "& .MuiDialog-paper": {
             borderRadius: "16px",
             background: "#ffffff",
-            border: "1px solid rgba(212, 175, 55, 0.3)",
+            border: "1px solid rgba(45, 106, 79, 0.3)",
           },
         }}
       >
         <DialogTitle
           sx={{
-            background: "linear-gradient(135deg, #D4AF37, #B8941F)",
-            color: "#1a1a1a",
+            background: "linear-gradient(135deg, #2D6A4F, #1B4332)",
+            color: "#FFFFFF",
             fontWeight: 700,
             display: "flex",
             alignItems: "center",
@@ -1045,13 +1045,13 @@ export default function Wallet({ user, setUser }) {
                           ? "rgba(76, 175, 80, 0.15)"
                           : selectedTransaction.transaction_type === "deduction"
                             ? "rgba(244, 67, 54, 0.15)"
-                            : "rgba(212, 175, 55, 0.15)",
+                            : "rgba(45, 106, 79, 0.15)",
                       color:
                         selectedTransaction.transaction_type === "purchase"
                           ? "#4caf50"
                           : selectedTransaction.transaction_type === "deduction"
                             ? "#f44336"
-                            : "#D4AF37",
+                            : "#2D6A4F",
                       fontWeight: 600,
                     }}
                   />
@@ -1133,7 +1133,7 @@ export default function Wallet({ user, setUser }) {
                     variant="outlined"
                     sx={{
                       mt: 0.5,
-                      borderColor: "rgba(212, 175, 55, 0.3)",
+                      borderColor: "rgba(45, 106, 79, 0.3)",
                       color: "rgba(26, 26, 26, 0.7)",
                       fontWeight: 600,
                     }}
@@ -1200,8 +1200,8 @@ export default function Wallet({ user, setUser }) {
         <DialogActions
           sx={{
             p: 2,
-            borderTop: "1px solid rgba(212, 175, 55, 0.2)",
-            backgroundColor: "rgba(212, 175, 55, 0.05)",
+            borderTop: "1px solid rgba(45, 106, 79, 0.2)",
+            backgroundColor: "rgba(45, 106, 79, 0.05)",
           }}
         >
           <Button
@@ -1214,7 +1214,7 @@ export default function Wallet({ user, setUser }) {
               fontWeight: 600,
               textTransform: "none",
               "&:hover": {
-                backgroundColor: "rgba(212, 175, 55, 0.1)",
+                backgroundColor: "rgba(45, 106, 79, 0.1)",
               },
             }}
           >

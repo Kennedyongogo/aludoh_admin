@@ -529,7 +529,7 @@ const EmojiPicker = ({
                 maxWidth: 36,
                 padding: 0,
                 "&:hover": {
-                  bgcolor: "rgba(212, 175, 55, 0.1)",
+                  bgcolor: "rgba(45, 106, 79, 0.1)",
                   transform: "scale(1.2)",
                 },
                 transition: "all 0.2s ease",

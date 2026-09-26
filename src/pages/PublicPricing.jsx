@@ -133,12 +133,12 @@ export default function PublicPricing() {
             <IconButton
               onClick={handleGoBack}
               sx={{
-                color: "#D4AF37",
-                backgroundColor: "rgba(212, 175, 55, 0.1)",
-                border: "1px solid rgba(212, 175, 55, 0.3)",
+                color: "#2D6A4F",
+                backgroundColor: "rgba(45, 106, 79, 0.1)",
+                border: "1px solid rgba(45, 106, 79, 0.3)",
                 "&:hover": {
-                  backgroundColor: "rgba(212, 175, 55, 0.2)",
-                  borderColor: "rgba(212, 175, 55, 0.5)",
+                  backgroundColor: "rgba(45, 106, 79, 0.2)",
+                  borderColor: "rgba(45, 106, 79, 0.5)",
                 },
                 flexShrink: 0,
               }}
@@ -150,7 +150,7 @@ export default function PublicPricing() {
               sx={{
                 fontWeight: 700,
                 fontSize: { xs: "1.5rem", sm: "2.125rem" },
-                background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -160,7 +160,7 @@ export default function PublicPricing() {
                 gap: 1,
               }}
             >
-              <AttachMoney sx={{ color: "#D4AF37" }} />
+              <AttachMoney sx={{ color: "#2D6A4F" }} />
               Pricing Plans
             </Typography>
           </Box>
@@ -171,8 +171,8 @@ export default function PublicPricing() {
         sx={{
           borderRadius: "16px",
           background: "#ffffff",
-          border: "1px solid rgba(212, 175, 55, 0.2)",
-          boxShadow: "0 2px 8px rgba(212, 175, 55, 0.08)",
+          border: "1px solid rgba(45, 106, 79, 0.2)",
+          boxShadow: "0 2px 8px rgba(45, 106, 79, 0.08)",
           overflow: "hidden",
         }}
       >
@@ -188,7 +188,7 @@ export default function PublicPricing() {
               <InputLabel
                 sx={{
                   "&.Mui-focused": {
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                   },
                 }}
               >
@@ -201,13 +201,13 @@ export default function PublicPricing() {
                 sx={{
                   borderRadius: "12px",
                   "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(212, 175, 55, 0.3)",
+                    borderColor: "rgba(45, 106, 79, 0.3)",
                   },
                   "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(212, 175, 55, 0.5)",
+                    borderColor: "rgba(45, 106, 79, 0.5)",
                   },
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#D4AF37",
+                    borderColor: "#2D6A4F",
                     borderWidth: "2px",
                   },
                   "& .MuiSelect-select": {
@@ -239,7 +239,7 @@ export default function PublicPricing() {
               variant="fullWidth"
               sx={{
                 "& .MuiTabs-indicator": {
-                  backgroundColor: "#D4AF37",
+                  backgroundColor: "#2D6A4F",
                   height: 3,
                   borderRadius: "3px 3px 0 0",
                 },
@@ -251,11 +251,11 @@ export default function PublicPricing() {
                   minHeight: 56,
                   px: { sm: 2, md: 3 },
                   "&:hover": {
-                    color: "#D4AF37",
-                    backgroundColor: "rgba(212, 175, 55, 0.08)",
+                    color: "#2D6A4F",
+                    backgroundColor: "rgba(45, 106, 79, 0.08)",
                   },
                   "&.Mui-selected": {
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                     fontWeight: 700,
                   },
                 },
@@ -745,9 +745,9 @@ export default function PublicPricing() {
                 sx={{
                   borderRadius: "16px",
                   background:
-                    "linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%)",
-                  border: "2px solid rgba(212, 175, 55, 0.7)",
-                  boxShadow: "0 4px 20px rgba(212, 175, 55, 0.3)",
+                    "linear-gradient(135deg, rgba(45, 106, 79, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%)",
+                  border: "2px solid rgba(45, 106, 79, 0.7)",
+                  boxShadow: "0 4px 20px rgba(45, 106, 79, 0.3)",
                   width: "100%",
                   height: "100%",
                   display: "flex",
@@ -756,7 +756,7 @@ export default function PublicPricing() {
                   transition: "all 0.3s ease",
                   "&:hover": {
                     transform: "translateY(-4px)",
-                    boxShadow: "0 8px 30px rgba(212, 175, 55, 0.45)",
+                    boxShadow: "0 8px 30px rgba(45, 106, 79, 0.45)",
                   },
                 }}
               >
@@ -772,21 +772,21 @@ export default function PublicPricing() {
                     <Chip
                       label="Gold Package"
                       sx={{
-                        bgcolor: "rgba(212, 175, 55, 0.3)",
-                        color: "#B8941F",
+                        bgcolor: "rgba(45, 106, 79, 0.3)",
+                        color: "#1B4332",
                         fontWeight: 700,
                         fontSize: "0.875rem",
                         mb: 2,
                         px: 2,
                         py: 0.5,
-                        border: "1px solid rgba(212, 175, 55, 0.5)",
+                        border: "1px solid rgba(45, 106, 79, 0.5)",
                       }}
                     />
                     <Typography
                       variant="h4"
                       sx={{
                         fontWeight: 700,
-                        background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                        background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                         backgroundClip: "text",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
@@ -838,7 +838,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -863,7 +863,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -889,7 +889,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -914,7 +914,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -939,7 +939,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -964,7 +964,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -990,7 +990,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1015,7 +1015,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1043,7 +1043,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1068,7 +1068,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1094,7 +1094,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1119,7 +1119,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1144,7 +1144,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1169,7 +1169,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1195,7 +1195,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1220,7 +1220,7 @@ export default function PublicPricing() {
                           >
                             <CheckCircle
                               sx={{
-                                color: "#D4AF37",
+                                color: "#2D6A4F",
                                 fontSize: "1.25rem",
                                 mt: 0.25,
                                 flexShrink: 0,
@@ -1251,12 +1251,12 @@ export default function PublicPricing() {
                           fontWeight: 700,
                           py: 1.25,
                           background:
-                            "linear-gradient(90deg, #D4AF37 0%, #B8941F 100%)",
-                          boxShadow: "0 4px 10px rgba(212, 175, 55, 0.4)",
+                            "linear-gradient(90deg, #2D6A4F 0%, #1B4332 100%)",
+                          boxShadow: "0 4px 10px rgba(45, 106, 79, 0.4)",
                           "&:hover": {
                             background:
-                              "linear-gradient(90deg, #B8941F 0%, #D4AF37 100%)",
-                            boxShadow: "0 6px 16px rgba(212, 175, 55, 0.5)",
+                              "linear-gradient(90deg, #1B4332 0%, #2D6A4F 100%)",
+                            boxShadow: "0 6px 16px rgba(45, 106, 79, 0.5)",
                           },
                         }}
                       >
@@ -1305,13 +1305,13 @@ export default function PublicPricing() {
                   width: { xs: 70, sm: 80, md: 90 },
                   height: { xs: 70, sm: 80, md: 90 },
                   filter: "blur(10px)",
-                  border: "2px solid rgba(212, 175, 55, 0.3)",
+                  border: "2px solid rgba(45, 106, 79, 0.3)",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(212, 175, 55, 0.2)",
+                  backgroundColor: "rgba(45, 106, 79, 0.2)",
                   transition: "all 0.3s ease",
                   "&:hover": {
                     filter: "blur(8px)",
-                    borderColor: "rgba(212, 175, 55, 0.5)",
+                    borderColor: "rgba(45, 106, 79, 0.5)",
                     transform: "scale(1.05)",
                   },
                 }}
@@ -1321,7 +1321,7 @@ export default function PublicPricing() {
                     width: "100%",
                     height: "100%",
                     background:
-                      "linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(184, 148, 31, 0.2) 100%)",
+                      "linear-gradient(135deg, rgba(45, 106, 79, 0.3) 0%, rgba(184, 148, 31, 0.2) 100%)",
                     borderRadius: "50%",
                   }}
                 />
@@ -1366,7 +1366,7 @@ export default function PublicPricing() {
               sx={{
                 fontWeight: 700,
                 fontSize: { xs: "1.5rem", sm: "2.125rem" },
-                background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -1376,7 +1376,7 @@ export default function PublicPricing() {
                 gap: 1,
               }}
             >
-              <FormatQuote sx={{ color: "#D4AF37" }} />
+              <FormatQuote sx={{ color: "#2D6A4F" }} />
               Testimonials
             </Typography>
           </Box>
@@ -1386,8 +1386,8 @@ export default function PublicPricing() {
           sx={{
             borderRadius: "16px",
             background: "#ffffff",
-            border: "1px solid rgba(212, 175, 55, 0.2)",
-            boxShadow: "0 2px 8px rgba(212, 175, 55, 0.08)",
+            border: "1px solid rgba(45, 106, 79, 0.2)",
+            boxShadow: "0 2px 8px rgba(45, 106, 79, 0.08)",
             overflow: "hidden",
           }}
         >
@@ -1401,7 +1401,7 @@ export default function PublicPricing() {
                   py: 6,
                 }}
               >
-                <CircularProgress sx={{ color: "#D4AF37" }} />
+                <CircularProgress sx={{ color: "#2D6A4F" }} />
               </Box>
             ) : testimonials.length === 0 ? (
               <Box
@@ -1443,7 +1443,7 @@ export default function PublicPricing() {
                     <React.Fragment key={testimonial.id || index}>
                       {index > 0 && (
                         <Divider
-                          sx={{ borderColor: "rgba(212, 175, 55, 0.2)" }}
+                          sx={{ borderColor: "rgba(45, 106, 79, 0.2)" }}
                         />
                       )}
                       <Box>
@@ -1460,7 +1460,7 @@ export default function PublicPricing() {
                             sx={{
                               width: { xs: 48, sm: 56 },
                               height: { xs: 48, sm: 56 },
-                              bgcolor: "#D4AF37",
+                              bgcolor: "#2D6A4F",
                               fontSize: { xs: "1.25rem", sm: "1.5rem" },
                               fontWeight: 700,
                             }}
@@ -1495,7 +1495,7 @@ export default function PublicPricing() {
                                         color:
                                           user.badgeType === "silver"
                                             ? "#C0C0C0"
-                                            : "#D4AF37",
+                                            : "#2D6A4F",
                                       }}
                                     />
                                   }
@@ -1513,16 +1513,16 @@ export default function PublicPricing() {
                                     backgroundColor:
                                       user.badgeType === "silver"
                                         ? "rgba(192, 192, 192, 0.15)"
-                                        : "rgba(212, 175, 55, 0.15)",
+                                        : "rgba(45, 106, 79, 0.15)",
                                     color:
                                       user.badgeType === "silver"
                                         ? "#5a5a5a"
-                                        : "#B8941F",
+                                        : "#1B4332",
                                     fontWeight: 600,
                                     border:
                                       user.badgeType === "silver"
                                         ? "1px solid rgba(192, 192, 192, 0.3)"
-                                        : "1px solid rgba(212, 175, 55, 0.3)",
+                                        : "1px solid rgba(45, 106, 79, 0.3)",
                                     "& .MuiChip-icon": {
                                       marginLeft: "6px",
                                     },
@@ -1557,7 +1557,7 @@ export default function PublicPricing() {
                                           fontSize: "0.875rem",
                                           color:
                                             i < testimonial.rating
-                                              ? "#D4AF37"
+                                              ? "#2D6A4F"
                                               : "rgba(0, 0, 0, 0.2)",
                                         }}
                                       />
@@ -1573,8 +1573,8 @@ export default function PublicPricing() {
                             elevation={0}
                             sx={{
                               borderRadius: "12px",
-                              backgroundColor: "rgba(212, 175, 55, 0.05)",
-                              border: "1px solid rgba(212, 175, 55, 0.2)",
+                              backgroundColor: "rgba(45, 106, 79, 0.05)",
+                              border: "1px solid rgba(45, 106, 79, 0.2)",
                               p: { xs: 2, sm: 2.5 },
                             }}
                           >
@@ -1596,8 +1596,8 @@ export default function PublicPricing() {
                             elevation={0}
                             sx={{
                               borderRadius: "12px",
-                              backgroundColor: "rgba(212, 175, 55, 0.05)",
-                              border: "1px solid rgba(212, 175, 55, 0.2)",
+                              backgroundColor: "rgba(45, 106, 79, 0.05)",
+                              border: "1px solid rgba(45, 106, 79, 0.2)",
                               p: { xs: 2, sm: 2.5 },
                               textAlign: "center",
                             }}

@@ -42,10 +42,10 @@ class ErrorBoundary extends React.Component {
               }
             }}
             sx={{
-              bgcolor: "#D4AF37",
-              color: "#1a1a1a",
+              bgcolor: "#2D6A4F",
+              color: "#FFFFFF",
               "&:hover": {
-                bgcolor: "#B8941F",
+                bgcolor: "#1B4332",
               },
             }}
           >

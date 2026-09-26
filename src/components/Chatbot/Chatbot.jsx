@@ -238,17 +238,17 @@ const Chatbot = () => {
 
   const getIntentColor = (intent) => {
     const colors = {
-      market_info: "#D4AF37",
+      market_info: "#2D6A4F",
       posts_info: "#2196f3",
       user_info: "#ff9800",
       platform_info: "#9c27b0",
-      pricing_info: "#B8941F",
+      pricing_info: "#1B4332",
       general_help: "#607d8b",
       general: "#607d8b",
       error: "#f44336",
-      greeting: "#D4AF37",
+      greeting: "#2D6A4F",
     };
-    return colors[intent] || "#D4AF37";
+    return colors[intent] || "#2D6A4F";
   };
 
   const formatTime = (date) => {
@@ -273,17 +273,17 @@ const Chatbot = () => {
               onClick={handleOpenChat}
               sx={{
                 background: "linear-gradient(135deg, #8B6914, #654321)",
-                color: "#D4AF37",
+                color: "#2D6A4F",
                 width: 64,
                 height: 64,
-                border: "3px solid #D4AF37",
+                border: "3px solid #2D6A4F",
                 boxShadow:
-                  "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.6)",
+                  "0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(45, 106, 79, 0.6)",
                 "&:hover": {
                   background: "linear-gradient(135deg, #654321, #8B6914)",
                   borderColor: "#F4D03F",
                   boxShadow:
-                    "0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.8)",
+                    "0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(45, 106, 79, 0.8)",
                   transform: "scale(1.1)",
                 },
                 transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -317,7 +317,7 @@ const Chatbot = () => {
           {/* Header */}
           <Box
             sx={{
-              background: "linear-gradient(135deg, #D4AF37 0%, #B8941F 100%)",
+              background: "linear-gradient(135deg, #2D6A4F 0%, #1B4332 100%)",
               color: "#1a1a1a",
               p: 2,
               display: "flex",
@@ -438,7 +438,7 @@ const Chatbot = () => {
                           borderRadius: 2,
                           background: message.isBot
                             ? "white"
-                            : "linear-gradient(135deg, #D4AF37, #B8941F)",
+                            : "linear-gradient(135deg, #2D6A4F, #1B4332)",
                           color: message.isBot ? "text.primary" : "#1a1a1a",
                           boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                           border: message.isBot ? "1px solid #e0e0e0" : "none",
@@ -508,7 +508,7 @@ const Chatbot = () => {
                       <Avatar
                         sx={{
                           background:
-                            "linear-gradient(135deg, #D4AF37, #B8941F)",
+                            "linear-gradient(135deg, #2D6A4F, #1B4332)",
                           width: 28,
                           height: 28,
                           mt: 0.5,
@@ -539,7 +539,7 @@ const Chatbot = () => {
                   >
                     <Avatar
                       sx={{
-                        background: "#D4AF37",
+                        background: "#2D6A4F",
                         width: 28,
                         height: 28,
                         mt: 0.5,
@@ -610,12 +610,12 @@ const Chatbot = () => {
                         sx={{
                           fontSize: "0.7rem",
                           cursor: "pointer",
-                          background: "rgba(212, 175, 55, 0.1)",
-                          color: "#B8941F",
-                          border: "1px solid rgba(212, 175, 55, 0.3)",
+                          background: "rgba(45, 106, 79, 0.1)",
+                          color: "#1B4332",
+                          border: "1px solid rgba(45, 106, 79, 0.3)",
                           "&:hover": {
                             background:
-                              "linear-gradient(135deg, #D4AF37, #B8941F)",
+                              "linear-gradient(135deg, #2D6A4F, #1B4332)",
                             color: "#1a1a1a",
                             transform: "scale(1.05)",
                           },
@@ -674,14 +674,14 @@ const Chatbot = () => {
                     sx={{
                       background:
                         inputValue.trim() && !isLoading
-                          ? "linear-gradient(135deg, #D4AF37, #B8941F)"
+                          ? "linear-gradient(135deg, #2D6A4F, #1B4332)"
                           : "grey.300",
                       color: "#1a1a1a",
                       p: 1,
                       "&:hover": {
                         background:
                           inputValue.trim() && !isLoading
-                            ? "linear-gradient(135deg, #B8941F, #D4AF37)"
+                            ? "linear-gradient(135deg, #1B4332, #2D6A4F)"
                             : "grey.400",
                       },
                       "&:disabled": {

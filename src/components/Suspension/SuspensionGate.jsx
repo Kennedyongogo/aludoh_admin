@@ -68,7 +68,7 @@ export default function SuspensionGate({
           maxWidth: 520,
           width: "100%",
           borderRadius: 3,
-          border: "1px solid rgba(212, 175, 55, 0.35)",
+          border: "1px solid rgba(45, 106, 79, 0.35)",
           background:
             "linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 215, 0, 0.08) 100%)",
         }}
@@ -173,10 +173,10 @@ export default function SuspensionGate({
               fontWeight: 700,
               color: "#2c3e50",
               textTransform: "none",
-              boxShadow: "0 10px 24px rgba(212, 175, 55, 0.35)",
+              boxShadow: "0 10px 24px rgba(45, 106, 79, 0.35)",
               "&:hover": {
                 backgroundColor: "#FFC700",
-                boxShadow: "0 12px 28px rgba(212, 175, 55, 0.45)",
+                boxShadow: "0 12px 28px rgba(45, 106, 79, 0.45)",
               },
             }}
           >

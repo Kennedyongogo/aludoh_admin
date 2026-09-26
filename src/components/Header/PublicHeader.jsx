@@ -141,7 +141,7 @@ export default function PublicHeader() {
           icon: "error",
           title: "Invalid File",
           text: "Please select an image file.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -151,7 +151,7 @@ export default function PublicHeader() {
           icon: "error",
           title: "File Too Large",
           text: "Please select an image smaller than 10MB.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -200,10 +200,10 @@ export default function PublicHeader() {
           const swal = document.querySelector(".swal2-popup");
           if (swal) {
             swal.style.borderRadius = "20px";
-            swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-            swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+            swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+            swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
             swal.style.background =
-              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
             swal.style.backdropFilter = "blur(20px)";
           }
           const title = document.querySelector(".swal2-title");
@@ -211,7 +211,7 @@ export default function PublicHeader() {
             title.style.color = "#1a1a1a";
             title.style.fontWeight = "700";
             title.style.fontSize = "1.5rem";
-            title.style.background = "linear-gradient(45deg, #D4AF37, #B8941F)";
+            title.style.background = "linear-gradient(45deg, #2D6A4F, #1B4332)";
             title.style.webkitBackgroundClip = "text";
             title.style.webkitTextFillColor = "transparent";
             title.style.backgroundClip = "text";
@@ -241,15 +241,15 @@ export default function PublicHeader() {
             icon: "error",
             title: "Login Failed",
             text: errorMessage,
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
             didOpen: () => {
               const swal = document.querySelector(".swal2-popup");
               if (swal) {
                 swal.style.borderRadius = "20px";
-                swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                 swal.style.background =
-                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                 swal.style.backdropFilter = "blur(20px)";
               }
               const title = document.querySelector(".swal2-title");
@@ -258,7 +258,7 @@ export default function PublicHeader() {
                 title.style.fontWeight = "700";
                 title.style.fontSize = "1.5rem";
                 title.style.background =
-                  "linear-gradient(45deg, #D4AF37, #B8941F)";
+                  "linear-gradient(45deg, #2D6A4F, #1B4332)";
                 title.style.webkitBackgroundClip = "text";
                 title.style.webkitTextFillColor = "transparent";
                 title.style.backgroundClip = "text";
@@ -278,15 +278,15 @@ export default function PublicHeader() {
               text: data.message || "Login successful!",
               timer: 1500,
               showConfirmButton: false,
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
               didOpen: () => {
                 const swal = document.querySelector(".swal2-popup");
                 if (swal) {
                   swal.style.borderRadius = "20px";
-                  swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                  swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                  swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                  swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                   swal.style.background =
-                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                   swal.style.backdropFilter = "blur(20px)";
                 }
                 const title = document.querySelector(".swal2-title");
@@ -295,22 +295,22 @@ export default function PublicHeader() {
                   title.style.fontWeight = "700";
                   title.style.fontSize = "1.5rem";
                   title.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                   title.style.webkitBackgroundClip = "text";
                   title.style.webkitTextFillColor = "transparent";
                   title.style.backgroundClip = "text";
                 }
                 const icon = document.querySelector(".swal2-success");
                 if (icon) {
-                  icon.style.color = "#D4AF37";
+                  icon.style.color = "#2D6A4F";
                   const circles = icon.querySelectorAll("circle");
                   circles.forEach((circle) => {
-                    circle.style.stroke = "#D4AF37";
+                    circle.style.stroke = "#2D6A4F";
                   });
                   const paths = icon.querySelectorAll("path");
                   paths.forEach((path) => {
-                    path.style.stroke = "#D4AF37";
-                    path.style.fill = "#D4AF37";
+                    path.style.stroke = "#2D6A4F";
+                    path.style.fill = "#2D6A4F";
                   });
                 }
                 const timerBar = document.querySelector(
@@ -318,7 +318,7 @@ export default function PublicHeader() {
                 );
                 if (timerBar) {
                   timerBar.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                 }
               },
               willClose: () => {
@@ -333,15 +333,15 @@ export default function PublicHeader() {
               icon: "error",
               title: "Login Failed",
               text: errorMessage,
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
               didOpen: () => {
                 const swal = document.querySelector(".swal2-popup");
                 if (swal) {
                   swal.style.borderRadius = "20px";
-                  swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                  swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                  swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                  swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                   swal.style.background =
-                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                   swal.style.backdropFilter = "blur(20px)";
                 }
                 const title = document.querySelector(".swal2-title");
@@ -350,7 +350,7 @@ export default function PublicHeader() {
                   title.style.fontWeight = "700";
                   title.style.fontSize = "1.5rem";
                   title.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                   title.style.webkitBackgroundClip = "text";
                   title.style.webkitTextFillColor = "transparent";
                   title.style.backgroundClip = "text";
@@ -365,15 +365,15 @@ export default function PublicHeader() {
           icon: "error",
           title: "Error",
           text: "Login failed. Please try again.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
           didOpen: () => {
             const swal = document.querySelector(".swal2-popup");
             if (swal) {
               swal.style.borderRadius = "20px";
-              swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-              swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+              swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+              swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
               swal.style.background =
-                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
               swal.style.backdropFilter = "blur(20px)";
             }
             const title = document.querySelector(".swal2-title");
@@ -382,7 +382,7 @@ export default function PublicHeader() {
               title.style.fontWeight = "700";
               title.style.fontSize = "1.5rem";
               title.style.background =
-                "linear-gradient(45deg, #D4AF37, #B8941F)";
+                "linear-gradient(45deg, #2D6A4F, #1B4332)";
               title.style.webkitBackgroundClip = "text";
               title.style.webkitTextFillColor = "transparent";
               title.style.backgroundClip = "text";
@@ -408,7 +408,7 @@ export default function PublicHeader() {
         icon: "error",
         title: "Invalid Phone Number",
         text: phoneValidationError,
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
       return;
     }
@@ -423,7 +423,7 @@ export default function PublicHeader() {
           icon: "error",
           title: "Age Verification Required",
           text: birthYearValidationError,
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
       }, 0);
       return;
@@ -455,10 +455,10 @@ export default function PublicHeader() {
           const swal = document.querySelector(".swal2-popup");
           if (swal) {
             swal.style.borderRadius = "20px";
-            swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-            swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+            swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+            swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
             swal.style.background =
-              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
             swal.style.backdropFilter = "blur(20px)";
           }
           const title = document.querySelector(".swal2-title");
@@ -466,7 +466,7 @@ export default function PublicHeader() {
             title.style.color = "#1a1a1a";
             title.style.fontWeight = "700";
             title.style.fontSize = "1.5rem";
-            title.style.background = "linear-gradient(45deg, #D4AF37, #B8941F)";
+            title.style.background = "linear-gradient(45deg, #2D6A4F, #1B4332)";
             title.style.webkitBackgroundClip = "text";
             title.style.webkitTextFillColor = "transparent";
             title.style.backgroundClip = "text";
@@ -519,15 +519,15 @@ export default function PublicHeader() {
             icon: "error",
             title: "Registration Failed",
             text: data.message || "Something went wrong. Please try again.",
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
             didOpen: () => {
               const swal = document.querySelector(".swal2-popup");
               if (swal) {
                 swal.style.borderRadius = "20px";
-                swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                 swal.style.background =
-                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                 swal.style.backdropFilter = "blur(20px)";
               }
               const title = document.querySelector(".swal2-title");
@@ -536,7 +536,7 @@ export default function PublicHeader() {
                 title.style.fontWeight = "700";
                 title.style.fontSize = "1.5rem";
                 title.style.background =
-                  "linear-gradient(45deg, #D4AF37, #B8941F)";
+                  "linear-gradient(45deg, #2D6A4F, #1B4332)";
                 title.style.webkitBackgroundClip = "text";
                 title.style.webkitTextFillColor = "transparent";
                 title.style.backgroundClip = "text";
@@ -554,15 +554,15 @@ export default function PublicHeader() {
               timer: 5000,
               timerProgressBar: true,
               showConfirmButton: false,
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
               didOpen: () => {
                 const swal = document.querySelector(".swal2-popup");
                 if (swal) {
                   swal.style.borderRadius = "20px";
-                  swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                  swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                  swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                  swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                   swal.style.background =
-                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                   swal.style.backdropFilter = "blur(20px)";
                 }
                 const title = document.querySelector(".swal2-title");
@@ -571,22 +571,22 @@ export default function PublicHeader() {
                   title.style.fontWeight = "700";
                   title.style.fontSize = "1.75rem";
                   title.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                   title.style.webkitBackgroundClip = "text";
                   title.style.webkitTextFillColor = "transparent";
                   title.style.backgroundClip = "text";
                 }
                 const icon = document.querySelector(".swal2-success");
                 if (icon) {
-                  icon.style.color = "#D4AF37";
+                  icon.style.color = "#2D6A4F";
                   const circles = icon.querySelectorAll("circle");
                   circles.forEach((circle) => {
-                    circle.style.stroke = "#D4AF37";
+                    circle.style.stroke = "#2D6A4F";
                   });
                   const paths = icon.querySelectorAll("path");
                   paths.forEach((path) => {
-                    path.style.stroke = "#D4AF37";
-                    path.style.fill = "#D4AF37";
+                    path.style.stroke = "#2D6A4F";
+                    path.style.fill = "#2D6A4F";
                   });
                 }
                 const timerBar = document.querySelector(
@@ -594,7 +594,7 @@ export default function PublicHeader() {
                 );
                 if (timerBar) {
                   timerBar.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                 }
               },
             });
@@ -608,15 +608,15 @@ export default function PublicHeader() {
               icon: "error",
               title: "Registration Failed",
               text: data.message || "Something went wrong. Please try again.",
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
               didOpen: () => {
                 const swal = document.querySelector(".swal2-popup");
                 if (swal) {
                   swal.style.borderRadius = "20px";
-                  swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                  swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                  swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                  swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                   swal.style.background =
-                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                   swal.style.backdropFilter = "blur(20px)";
                 }
                 const title = document.querySelector(".swal2-title");
@@ -625,7 +625,7 @@ export default function PublicHeader() {
                   title.style.fontWeight = "700";
                   title.style.fontSize = "1.5rem";
                   title.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                   title.style.webkitBackgroundClip = "text";
                   title.style.webkitTextFillColor = "transparent";
                   title.style.backgroundClip = "text";
@@ -640,15 +640,15 @@ export default function PublicHeader() {
           icon: "error",
           title: "Error",
           text: "Registration failed. Please try again.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
           didOpen: () => {
             const swal = document.querySelector(".swal2-popup");
             if (swal) {
               swal.style.borderRadius = "20px";
-              swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-              swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+              swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+              swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
               swal.style.background =
-                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
               swal.style.backdropFilter = "blur(20px)";
             }
             const title = document.querySelector(".swal2-title");
@@ -657,7 +657,7 @@ export default function PublicHeader() {
               title.style.fontWeight = "700";
               title.style.fontSize = "1.5rem";
               title.style.background =
-                "linear-gradient(45deg, #D4AF37, #B8941F)";
+                "linear-gradient(45deg, #2D6A4F, #1B4332)";
               title.style.webkitBackgroundClip = "text";
               title.style.webkitTextFillColor = "transparent";
               title.style.backgroundClip = "text";
@@ -679,15 +679,15 @@ export default function PublicHeader() {
             : "rgba(255, 236, 179, 0.5)",
           backdropFilter: scrolled ? "blur(20px)" : "blur(10px)",
           boxShadow: scrolled
-            ? "0 8px 32px rgba(212, 175, 55, 0.25)"
-            : "0 4px 20px rgba(212, 175, 55, 0.2)",
+            ? "0 8px 32px rgba(45, 106, 79, 0.25)"
+            : "0 4px 20px rgba(45, 106, 79, 0.2)",
           transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
           borderBottom: scrolled
-            ? "2px solid rgba(212, 175, 55, 0.4)"
-            : "2px solid rgba(212, 175, 55, 0.3)",
+            ? "2px solid rgba(45, 106, 79, 0.4)"
+            : "2px solid rgba(45, 106, 79, 0.3)",
           backgroundImage: scrolled
             ? "linear-gradient(135deg, rgba(255, 248, 220, 0.98) 0%, rgba(255, 236, 179, 0.95) 100%)"
-            : "linear-gradient(135deg, rgba(255, 236, 179, 0.5) 0%, rgba(245, 230, 211, 0.6) 100%)",
+            : "linear-gradient(135deg, rgba(255, 236, 179, 0.5) 0%, rgba(216, 243, 220, 0.6) 100%)",
         }}
       >
         <Toolbar sx={{ px: { xs: 2, sm: 3, md: 4 }, py: 1 }}>
@@ -714,8 +714,8 @@ export default function PublicHeader() {
                 onClick={() => navigate("/")}
               >
                 <img
-                  src="/tuvibe.png"
-                  alt="Tuvibe Logo"
+                  src="/favicon.ico?v=2"
+                  alt="Mcaludoh Consultancy logo"
                   style={{
                     height: scrolled ? "56px" : "64px",
                     width: "auto",
@@ -737,14 +737,14 @@ export default function PublicHeader() {
                         ? "none"
                         : "2px 2px 4px rgba(255,255,255,0.5)",
                       background: scrolled
-                        ? "linear-gradient(45deg, #D4AF37, #B8941F)"
-                        : "linear-gradient(45deg, #D4AF37, #E8D5A3)",
+                        ? "linear-gradient(45deg, #2D6A4F, #1B4332)"
+                        : "linear-gradient(45deg, #2D6A4F, #52B788)",
                       backgroundClip: "text",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    Tuvibe
+                    Mcaludoh Consultancy
                   </Typography>
                 </Box>
               </Box>
@@ -761,11 +761,11 @@ export default function PublicHeader() {
               <Fade in={true} timeout={1000}>
                 <Button
                   onClick={handleRegister}
-                  startIcon={<PersonAdd sx={{ color: "#D4AF37" }} />}
+                  startIcon={<PersonAdd sx={{ color: "#2D6A4F" }} />}
                   variant="outlined"
                   sx={{
-                    color: "#D4AF37",
-                    borderColor: "#D4AF37",
+                    color: "#2D6A4F",
+                    borderColor: "#2D6A4F",
                     borderWidth: "2px",
                     fontSize: "1rem",
                     fontWeight: 600,
@@ -776,13 +776,13 @@ export default function PublicHeader() {
                     outline: "none",
                     transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     "&:hover": {
-                      backgroundColor: "rgba(212, 175, 55, 0.15)",
-                      borderColor: "#B8941F",
+                      backgroundColor: "rgba(45, 106, 79, 0.15)",
+                      borderColor: "#1B4332",
                       borderWidth: "2px",
                       transform: "translateY(-2px)",
-                      boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                      boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                       "& .MuiSvgIcon-root": {
-                        color: "#B8941F",
+                        color: "#1B4332",
                       },
                     },
                     "&:focus": {
@@ -808,7 +808,7 @@ export default function PublicHeader() {
                   startIcon={<Login sx={{ color: "white" }} />}
                   variant="contained"
                   sx={{
-                    backgroundColor: "#D4AF37",
+                    backgroundColor: "#2D6A4F",
                     color: "white",
                     fontSize: "1rem",
                     fontWeight: 600,
@@ -817,12 +817,12 @@ export default function PublicHeader() {
                     borderRadius: "25px",
                     textTransform: "none",
                     outline: "none",
-                    background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                    background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                     transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                     "&:hover": {
-                      background: "linear-gradient(45deg, #B8941F, #D4AF37)",
+                      background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
                       transform: "translateY(-2px)",
-                      boxShadow: "0 8px 25px rgba(212, 175, 55, 0.5)",
+                      boxShadow: "0 8px 25px rgba(45, 106, 79, 0.5)",
                     },
                     "&:focus": {
                       outline: "none",
@@ -848,17 +848,17 @@ export default function PublicHeader() {
               <IconButton
                 sx={{
                   display: { xs: "flex", md: "none" },
-                  color: "#D4AF37",
+                  color: "#2D6A4F",
                   transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                   borderRadius: "12px",
                   outline: "none",
-                  border: "2px solid rgba(212, 175, 55, 0.3)",
+                  border: "2px solid rgba(45, 106, 79, 0.3)",
                   "&:hover": {
-                    backgroundColor: "rgba(212, 175, 55, 0.15)",
-                    borderColor: "#D4AF37",
+                    backgroundColor: "rgba(45, 106, 79, 0.15)",
+                    borderColor: "#2D6A4F",
                     transform: "rotate(90deg) scale(1.1)",
-                    boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
-                    color: "#B8941F",
+                    boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
+                    color: "#1B4332",
                   },
                   "&:focus": {
                     outline: "none",
@@ -894,8 +894,8 @@ export default function PublicHeader() {
             backgroundImage:
               "linear-gradient(135deg, rgba(255, 248, 220, 0.98) 0%, rgba(255, 236, 179, 0.95) 100%)",
             backdropFilter: "blur(20px)",
-            borderLeft: "3px solid rgba(212, 175, 55, 0.5)",
-            boxShadow: "0 8px 32px rgba(212, 175, 55, 0.25)",
+            borderLeft: "3px solid rgba(45, 106, 79, 0.5)",
+            boxShadow: "0 8px 32px rgba(45, 106, 79, 0.25)",
             height: "auto",
             top: "80px",
             bottom: "auto",
@@ -915,7 +915,7 @@ export default function PublicHeader() {
               variant="h6"
               sx={{
                 fontWeight: 700,
-                background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -932,14 +932,14 @@ export default function PublicHeader() {
                 borderRadius: "8px",
                 "&:hover": {
                   transform: "rotate(90deg)",
-                  backgroundColor: "rgba(212, 175, 55, 0.1)",
+                  backgroundColor: "rgba(45, 106, 79, 0.1)",
                 },
               }}
             >
               <Close fontSize="small" />
             </IconButton>
           </Box>
-          <Divider sx={{ mb: 2, borderColor: "rgba(212, 175, 55, 0.2)" }} />
+          <Divider sx={{ mb: 2, borderColor: "rgba(45, 106, 79, 0.2)" }} />
           <List sx={{ py: 0 }}>
             <ListItemButton
               onClick={() => {
@@ -953,11 +953,11 @@ export default function PublicHeader() {
                 px: 2,
                 transition: "all 0.3s ease",
                 "&:hover": {
-                  backgroundColor: "rgba(212, 175, 55, 0.15)",
+                  backgroundColor: "rgba(45, 106, 79, 0.15)",
                   transform: "translateX(8px)",
-                  boxShadow: "0 4px 12px rgba(212, 175, 55, 0.2)",
+                  boxShadow: "0 4px 12px rgba(45, 106, 79, 0.2)",
                   "& .icon": {
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                     transform: "rotate(180deg)",
                   },
                 },
@@ -965,7 +965,7 @@ export default function PublicHeader() {
             >
               <ListItemIcon
                 sx={{
-                  color: "#D4AF37",
+                  color: "#2D6A4F",
                   minWidth: 36,
                   "& .icon": {
                     transition: "all 0.3s ease",
@@ -995,11 +995,11 @@ export default function PublicHeader() {
                 px: 2,
                 transition: "all 0.3s ease",
                 "&:hover": {
-                  backgroundColor: "rgba(212, 175, 55, 0.15)",
+                  backgroundColor: "rgba(45, 106, 79, 0.15)",
                   transform: "translateX(8px)",
-                  boxShadow: "0 4px 12px rgba(212, 175, 55, 0.2)",
+                  boxShadow: "0 4px 12px rgba(45, 106, 79, 0.2)",
                   "& .icon": {
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                     transform: "rotate(180deg)",
                   },
                 },
@@ -1007,7 +1007,7 @@ export default function PublicHeader() {
             >
               <ListItemIcon
                 sx={{
-                  color: "#D4AF37",
+                  color: "#2D6A4F",
                   minWidth: 36,
                   "& .icon": {
                     transition: "all 0.3s ease",
@@ -1040,8 +1040,8 @@ export default function PublicHeader() {
             backgroundImage:
               "linear-gradient(135deg, rgba(255, 248, 220, 0.98) 0%, rgba(255, 236, 179, 0.95) 100%)",
             backdropFilter: "blur(20px)",
-            boxShadow: "0 20px 60px rgba(212, 175, 55, 0.3)",
-            border: "2px solid rgba(212, 175, 55, 0.3)",
+            boxShadow: "0 20px 60px rgba(45, 106, 79, 0.3)",
+            border: "2px solid rgba(45, 106, 79, 0.3)",
             maxHeight: "95vh",
             width: { xs: "90%", sm: "85%", md: "75%" },
             maxWidth: "700px",
@@ -1051,7 +1051,7 @@ export default function PublicHeader() {
       >
         <DialogTitle
           sx={{
-            background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+            background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -1088,13 +1088,13 @@ export default function PublicHeader() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -1108,7 +1108,7 @@ export default function PublicHeader() {
                         transform: "translate(14px, -9px) scale(0.75)",
                       },
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -1131,13 +1131,13 @@ export default function PublicHeader() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -1151,7 +1151,7 @@ export default function PublicHeader() {
                         transform: "translate(14px, -9px) scale(0.75)",
                       },
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -1169,13 +1169,13 @@ export default function PublicHeader() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -1189,7 +1189,7 @@ export default function PublicHeader() {
                         transform: "translate(14px, -9px) scale(0.75)",
                       },
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -1206,13 +1206,13 @@ export default function PublicHeader() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -1226,7 +1226,7 @@ export default function PublicHeader() {
                         transform: "translate(14px, -9px) scale(0.75)",
                       },
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -1236,7 +1236,7 @@ export default function PublicHeader() {
                         <IconButton
                           onClick={() => setShowPassword(!showPassword)}
                           edge="end"
-                          sx={{ color: "#D4AF37" }}
+                          sx={{ color: "#2D6A4F" }}
                         >
                           {showPassword ? <VisibilityOff /> : <Visibility />}
                         </IconButton>
@@ -1247,7 +1247,7 @@ export default function PublicHeader() {
 
                 {/* Optional Fields */}
                 <FormControl fullWidth>
-                  <InputLabel sx={{ "&.Mui-focused": { color: "#D4AF37" } }}>
+                  <InputLabel sx={{ "&.Mui-focused": { color: "#2D6A4F" } }}>
                     Gender
                   </InputLabel>
                   <Select
@@ -1261,13 +1261,13 @@ export default function PublicHeader() {
                         lineHeight: 1.5,
                       },
                       "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     }}
@@ -1296,13 +1296,13 @@ export default function PublicHeader() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -1316,7 +1316,7 @@ export default function PublicHeader() {
                         transform: "translate(14px, -9px) scale(0.75)",
                       },
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -1346,13 +1346,13 @@ export default function PublicHeader() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -1366,7 +1366,7 @@ export default function PublicHeader() {
                         transform: "translate(14px, -9px) scale(0.75)",
                       },
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -1385,11 +1385,11 @@ export default function PublicHeader() {
                     sx={{
                       width: 150,
                       height: 150,
-                      border: "2px dashed rgba(212, 175, 55, 0.5)",
+                      border: "2px dashed rgba(45, 106, 79, 0.5)",
                       borderRadius: "12px",
                       "&:hover": {
-                        borderColor: "#D4AF37",
-                        backgroundColor: "rgba(212, 175, 55, 0.1)",
+                        borderColor: "#2D6A4F",
+                        backgroundColor: "rgba(45, 106, 79, 0.1)",
                       },
                     }}
                   >
@@ -1403,7 +1403,7 @@ export default function PublicHeader() {
                         }}
                       />
                     ) : (
-                      <PhotoCamera sx={{ fontSize: 60, color: "#D4AF37" }} />
+                      <PhotoCamera sx={{ fontSize: 60, color: "#2D6A4F" }} />
                     )}
                   </IconButton>
                 </label>
@@ -1456,7 +1456,7 @@ export default function PublicHeader() {
                     color: "primary.main",
                     "&:hover": {
                       borderColor: "primary.dark",
-                      backgroundColor: "rgba(212, 175, 55, 0.1)",
+                      backgroundColor: "rgba(45, 106, 79, 0.1)",
                     },
                   }}
                 >
@@ -1478,7 +1478,7 @@ export default function PublicHeader() {
                         icon: "error",
                         title: "Missing Fields",
                         text: "Please fill in all required fields.",
-                        confirmButtonColor: "#D4AF37",
+                        confirmButtonColor: "#2D6A4F",
                         zIndex: 2000,
                         didOpen: () => {
                           const swalContainer =
@@ -1504,7 +1504,7 @@ export default function PublicHeader() {
                         icon: "error",
                         title: "Invalid Phone Number",
                         text: stepPhoneError,
-                        confirmButtonColor: "#D4AF37",
+                        confirmButtonColor: "#2D6A4F",
                         zIndex: 2000,
                         didOpen: () => {
                           const swalContainer =
@@ -1531,10 +1531,10 @@ export default function PublicHeader() {
                     textTransform: "none",
                     fontWeight: 600,
                     fontSize: { xs: "0.875rem", sm: "1rem" },
-                    background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                    background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                     "&:hover": {
-                      background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                      boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                      background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                      boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                     },
                   }}
                 >
@@ -1557,7 +1557,7 @@ export default function PublicHeader() {
                     color: "primary.main",
                     "&:hover": {
                       borderColor: "primary.dark",
-                      backgroundColor: "rgba(212, 175, 55, 0.1)",
+                      backgroundColor: "rgba(45, 106, 79, 0.1)",
                     },
                   }}
                 >
@@ -1573,10 +1573,10 @@ export default function PublicHeader() {
                     textTransform: "none",
                     fontWeight: 600,
                     fontSize: { xs: "0.875rem", sm: "1rem" },
-                    background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                    background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                     "&:hover": {
-                      background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                      boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                      background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                      boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                     },
                   }}
                 >
@@ -1600,7 +1600,7 @@ export default function PublicHeader() {
               "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 248, 220, 0.95) 100%)",
             backdropFilter: "blur(30px)",
             boxShadow:
-              "0 25px 80px rgba(212, 175, 55, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.1)",
+              "0 25px 80px rgba(45, 106, 79, 0.25), 0 0 0 1px rgba(45, 106, 79, 0.1)",
             maxHeight: "95vh",
             width: { xs: "90%", sm: "500px" },
             margin: "auto",
@@ -1613,7 +1613,7 @@ export default function PublicHeader() {
               left: 0,
               right: 0,
               height: "4px",
-              background: "linear-gradient(90deg, #D4AF37, #B8941F, #D4AF37)",
+              background: "linear-gradient(90deg, #2D6A4F, #1B4332, #2D6A4F)",
               backgroundSize: "200% 100%",
               animation: "shimmer 3s ease-in-out infinite",
             },
@@ -1630,7 +1630,7 @@ export default function PublicHeader() {
             height: 150,
             borderRadius: "50%",
             background:
-              "linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 148, 31, 0.05))",
+              "linear-gradient(135deg, rgba(45, 106, 79, 0.1), rgba(184, 148, 31, 0.05))",
             filter: "blur(40px)",
             zIndex: 0,
           }}
@@ -1644,7 +1644,7 @@ export default function PublicHeader() {
             height: 120,
             borderRadius: "50%",
             background:
-              "linear-gradient(135deg, rgba(245, 230, 211, 0.3), rgba(212, 175, 55, 0.1))",
+              "linear-gradient(135deg, rgba(216, 243, 220, 0.3), rgba(45, 106, 79, 0.1))",
             filter: "blur(30px)",
             zIndex: 0,
           }}
@@ -1673,7 +1673,7 @@ export default function PublicHeader() {
               <AutoAwesome
                 sx={{
                   fontSize: { xs: 28, sm: 32 },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -1683,7 +1683,7 @@ export default function PublicHeader() {
               <Typography
                 variant="h4"
                 sx={{
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -1697,7 +1697,7 @@ export default function PublicHeader() {
               <AutoAwesome
                 sx={{
                   fontSize: { xs: 28, sm: 32 },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -1745,7 +1745,7 @@ export default function PublicHeader() {
                         <InputAdornment position="start">
                           <Email
                             sx={{
-                              color: "#D4AF37",
+                              color: "#2D6A4F",
                               fontSize: { xs: 20, sm: 22 },
                             }}
                           />
@@ -1758,19 +1758,19 @@ export default function PublicHeader() {
                         backgroundColor: "rgba(255, 255, 255, 0.8)",
                         transition: "all 0.3s ease",
                         "& fieldset": {
-                          borderColor: "rgba(212, 175, 55, 0.25)",
+                          borderColor: "rgba(45, 106, 79, 0.25)",
                           borderWidth: "1.5px",
                         },
                         "&:hover": {
                           backgroundColor: "rgba(255, 255, 255, 0.95)",
                           "& fieldset": {
-                            borderColor: "rgba(212, 175, 55, 0.5)",
+                            borderColor: "rgba(45, 106, 79, 0.5)",
                           },
                         },
                         "&.Mui-focused": {
                           backgroundColor: "rgba(255, 255, 255, 1)",
                           "& fieldset": {
-                            borderColor: "#D4AF37",
+                            borderColor: "#2D6A4F",
                             borderWidth: "2px",
                           },
                         },
@@ -1782,7 +1782,7 @@ export default function PublicHeader() {
                       "& .MuiInputLabel-root": {
                         fontSize: { xs: "0.9375rem", sm: "1rem" },
                         "&.Mui-focused": {
-                          color: "#D4AF37",
+                          color: "#2D6A4F",
                           fontWeight: 500,
                         },
                       },
@@ -1806,7 +1806,7 @@ export default function PublicHeader() {
                         <InputAdornment position="start">
                           <Lock
                             sx={{
-                              color: "#D4AF37",
+                              color: "#2D6A4F",
                               fontSize: { xs: 20, sm: 22 },
                             }}
                           />
@@ -1820,9 +1820,9 @@ export default function PublicHeader() {
                             }
                             edge="end"
                             sx={{
-                              color: "#D4AF37",
+                              color: "#2D6A4F",
                               "&:hover": {
-                                backgroundColor: "rgba(212, 175, 55, 0.1)",
+                                backgroundColor: "rgba(45, 106, 79, 0.1)",
                               },
                             }}
                           >
@@ -1841,19 +1841,19 @@ export default function PublicHeader() {
                         backgroundColor: "rgba(255, 255, 255, 0.8)",
                         transition: "all 0.3s ease",
                         "& fieldset": {
-                          borderColor: "rgba(212, 175, 55, 0.25)",
+                          borderColor: "rgba(45, 106, 79, 0.25)",
                           borderWidth: "1.5px",
                         },
                         "&:hover": {
                           backgroundColor: "rgba(255, 255, 255, 0.95)",
                           "& fieldset": {
-                            borderColor: "rgba(212, 175, 55, 0.5)",
+                            borderColor: "rgba(45, 106, 79, 0.5)",
                           },
                         },
                         "&.Mui-focused": {
                           backgroundColor: "rgba(255, 255, 255, 1)",
                           "& fieldset": {
-                            borderColor: "#D4AF37",
+                            borderColor: "#2D6A4F",
                             borderWidth: "2px",
                           },
                         },
@@ -1865,7 +1865,7 @@ export default function PublicHeader() {
                       "& .MuiInputLabel-root": {
                         fontSize: { xs: "0.9375rem", sm: "1rem" },
                         "&.Mui-focused": {
-                          color: "#D4AF37",
+                          color: "#2D6A4F",
                           fontWeight: 500,
                         },
                       },
@@ -1888,19 +1888,19 @@ export default function PublicHeader() {
                           icon: "info",
                           title: "Forgot Password",
                           text: "Password reset feature coming soon!",
-                          confirmButtonColor: "#D4AF37",
+                          confirmButtonColor: "#2D6A4F",
                         });
                       }}
                       sx={{
                         fontSize: { xs: "0.8125rem", sm: "0.875rem" },
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                         fontWeight: 500,
                         cursor: "pointer",
                         background: "none",
                         border: "none",
                         textDecoration: "none",
                         "&:hover": {
-                          color: "#B8941F",
+                          color: "#1B4332",
                           textDecoration: "underline",
                         },
                       }}
@@ -1935,12 +1935,12 @@ export default function PublicHeader() {
                   textTransform: "none",
                   fontWeight: 600,
                   fontSize: { xs: "1rem", sm: "1.0625rem" },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
-                  boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
+                  boxShadow: "0 4px 15px rgba(45, 106, 79, 0.3)",
                   transition: "all 0.3s ease",
                   "&:hover": {
-                    background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                    boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                    background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                    boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                     transform: "translateY(-2px)",
                   },
                   "&:active": {
@@ -1981,7 +1981,7 @@ export default function PublicHeader() {
                   }}
                   sx={{
                     fontSize: { xs: "0.8125rem", sm: "0.875rem" },
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                     fontWeight: 600,
                     cursor: "pointer",
                     background: "none",
@@ -1991,7 +1991,7 @@ export default function PublicHeader() {
                     alignItems: "center",
                     gap: 0.5,
                     "&:hover": {
-                      color: "#B8941F",
+                      color: "#1B4332",
                       textDecoration: "underline",
                     },
                   }}
@@ -2009,7 +2009,7 @@ export default function PublicHeader() {
                   color: "text.secondary",
                   fontSize: { xs: "0.8125rem", sm: "0.875rem" },
                   "&:hover": {
-                    backgroundColor: "rgba(212, 175, 55, 0.05)",
+                    backgroundColor: "rgba(45, 106, 79, 0.05)",
                   },
                 }}
               >

@@ -235,7 +235,7 @@ export default function SuspensionAppealModal({
       PaperProps={{
         sx: {
           borderRadius: 3,
-          border: "1px solid rgba(212, 175, 55, 0.35)",
+          border: "1px solid rgba(45, 106, 79, 0.35)",
           overflow: "hidden",
         },
       }}
@@ -289,7 +289,7 @@ export default function SuspensionAppealModal({
                 height: "100%",
               }}
             >
-              <CircularProgress sx={{ color: "#FFD700" }} />
+              <CircularProgress sx={{ color: "#52B788" }} />
             </Box>
           ) : messages.length === 0 ? (
             <Box
@@ -436,7 +436,7 @@ export default function SuspensionAppealModal({
             disabled={sending || !messageInput.trim()}
             startIcon={sending ? <CircularProgress size={16} /> : <SendIcon />}
             sx={{
-              background: "#FFD700",
+              background: "#52B788",
               color: "#2c3e50",
               fontWeight: 600,
               "&:hover": {

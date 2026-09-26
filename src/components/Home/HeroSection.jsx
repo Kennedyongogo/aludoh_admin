@@ -261,7 +261,7 @@ export default function HeroSection() {
           icon: "error",
           title: "Invalid File",
           text: "Please select an image file.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -271,7 +271,7 @@ export default function HeroSection() {
           icon: "error",
           title: "File Too Large",
           text: "Please select an image smaller than 10MB.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -355,7 +355,7 @@ export default function HeroSection() {
                 title: "Welcome!",
                 text: "Please complete your profile by adding your age and phone number to continue.",
                 confirmButtonText: "Go to Profile",
-                confirmButtonColor: "#D4AF37",
+                confirmButtonColor: "#2D6A4F",
               }).then(() => {
                 window.location.href = "/profile";
               });
@@ -367,7 +367,7 @@ export default function HeroSection() {
                 text: "Signed in with Google successfully!",
                 timer: 1500,
                 showConfirmButton: false,
-                confirmButtonColor: "#D4AF37",
+                confirmButtonColor: "#2D6A4F",
               });
               setTimeout(() => {
                 window.location.href = "/home";
@@ -384,7 +384,7 @@ export default function HeroSection() {
           icon: "error",
           title: "Sign-In Failed",
           text: errorMessage,
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -424,7 +424,7 @@ export default function HeroSection() {
         icon: "error",
         title: "Sign-In Failed",
         text: "An error occurred during Google sign-in. Please try again.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
     }
   };
@@ -434,7 +434,7 @@ export default function HeroSection() {
       icon: "error",
       title: "Sign-In Failed",
       text: "Google sign-in failed. Please try again.",
-      confirmButtonColor: "#D4AF37",
+      confirmButtonColor: "#2D6A4F",
     });
   };
 
@@ -452,10 +452,10 @@ export default function HeroSection() {
           const swal = document.querySelector(".swal2-popup");
           if (swal) {
             swal.style.borderRadius = "20px";
-            swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-            swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+            swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+            swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
             swal.style.background =
-              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
             swal.style.backdropFilter = "blur(20px)";
           }
           const title = document.querySelector(".swal2-title");
@@ -463,7 +463,7 @@ export default function HeroSection() {
             title.style.color = "#1a1a1a";
             title.style.fontWeight = "700";
             title.style.fontSize = "1.5rem";
-            title.style.background = "linear-gradient(45deg, #D4AF37, #B8941F)";
+            title.style.background = "linear-gradient(45deg, #2D6A4F, #1B4332)";
             title.style.webkitBackgroundClip = "text";
             title.style.webkitTextFillColor = "transparent";
             title.style.backgroundClip = "text";
@@ -493,15 +493,15 @@ export default function HeroSection() {
             icon: "error",
             title: "Login Failed",
             text: errorMessage,
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
             didOpen: () => {
               const swal = document.querySelector(".swal2-popup");
               if (swal) {
                 swal.style.borderRadius = "20px";
-                swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                 swal.style.background =
-                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                 swal.style.backdropFilter = "blur(20px)";
               }
               const title = document.querySelector(".swal2-title");
@@ -510,7 +510,7 @@ export default function HeroSection() {
                 title.style.fontWeight = "700";
                 title.style.fontSize = "1.5rem";
                 title.style.background =
-                  "linear-gradient(45deg, #D4AF37, #B8941F)";
+                  "linear-gradient(45deg, #2D6A4F, #1B4332)";
                 title.style.webkitBackgroundClip = "text";
                 title.style.webkitTextFillColor = "transparent";
                 title.style.backgroundClip = "text";
@@ -528,15 +528,15 @@ export default function HeroSection() {
               text: data.message || "Login successful!",
               timer: 1500,
               showConfirmButton: false,
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
               didOpen: () => {
                 const swal = document.querySelector(".swal2-popup");
                 if (swal) {
                   swal.style.borderRadius = "20px";
-                  swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                  swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                  swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                  swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                   swal.style.background =
-                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                   swal.style.backdropFilter = "blur(20px)";
                 }
                 const title = document.querySelector(".swal2-title");
@@ -545,22 +545,22 @@ export default function HeroSection() {
                   title.style.fontWeight = "700";
                   title.style.fontSize = "1.5rem";
                   title.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                   title.style.webkitBackgroundClip = "text";
                   title.style.webkitTextFillColor = "transparent";
                   title.style.backgroundClip = "text";
                 }
                 const icon = document.querySelector(".swal2-success");
                 if (icon) {
-                  icon.style.color = "#D4AF37";
+                  icon.style.color = "#2D6A4F";
                   const circles = icon.querySelectorAll("circle");
                   circles.forEach((circle) => {
-                    circle.style.stroke = "#D4AF37";
+                    circle.style.stroke = "#2D6A4F";
                   });
                   const paths = icon.querySelectorAll("path");
                   paths.forEach((path) => {
-                    path.style.stroke = "#D4AF37";
-                    path.style.fill = "#D4AF37";
+                    path.style.stroke = "#2D6A4F";
+                    path.style.fill = "#2D6A4F";
                   });
                 }
                 const timerBar = document.querySelector(
@@ -568,7 +568,7 @@ export default function HeroSection() {
                 );
                 if (timerBar) {
                   timerBar.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                 }
               },
             });
@@ -582,15 +582,15 @@ export default function HeroSection() {
               title: "Login Failed",
               text:
                 data.message || "Invalid email or password. Please try again.",
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
               didOpen: () => {
                 const swal = document.querySelector(".swal2-popup");
                 if (swal) {
                   swal.style.borderRadius = "20px";
-                  swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                  swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                  swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                  swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                   swal.style.background =
-                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                    "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                   swal.style.backdropFilter = "blur(20px)";
                 }
                 const title = document.querySelector(".swal2-title");
@@ -599,7 +599,7 @@ export default function HeroSection() {
                   title.style.fontWeight = "700";
                   title.style.fontSize = "1.5rem";
                   title.style.background =
-                    "linear-gradient(45deg, #D4AF37, #B8941F)";
+                    "linear-gradient(45deg, #2D6A4F, #1B4332)";
                   title.style.webkitBackgroundClip = "text";
                   title.style.webkitTextFillColor = "transparent";
                   title.style.backgroundClip = "text";
@@ -614,15 +614,15 @@ export default function HeroSection() {
           icon: "error",
           title: "Error",
           text: "Login failed. Please try again.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
           didOpen: () => {
             const swal = document.querySelector(".swal2-popup");
             if (swal) {
               swal.style.borderRadius = "20px";
-              swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-              swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+              swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+              swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
               swal.style.background =
-                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
               swal.style.backdropFilter = "blur(20px)";
             }
             const title = document.querySelector(".swal2-title");
@@ -631,7 +631,7 @@ export default function HeroSection() {
               title.style.fontWeight = "700";
               title.style.fontSize = "1.5rem";
               title.style.background =
-                "linear-gradient(45deg, #D4AF37, #B8941F)";
+                "linear-gradient(45deg, #2D6A4F, #1B4332)";
               title.style.webkitBackgroundClip = "text";
               title.style.webkitTextFillColor = "transparent";
               title.style.backgroundClip = "text";
@@ -661,7 +661,7 @@ export default function HeroSection() {
             icon: "error",
             title: "Invalid Phone Number",
             text: phoneValidationError,
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
           });
           return;
         }
@@ -677,7 +677,7 @@ export default function HeroSection() {
               icon: "error",
               title: "Age Verification Required",
               text: birthYearValidationError,
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
             });
           }, 0);
           return;
@@ -690,7 +690,7 @@ export default function HeroSection() {
           icon: "error",
           title: "Username Required",
           text: "Please provide a username so other members can recognise you.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         setRegisterStep(1);
         return;
@@ -706,7 +706,7 @@ export default function HeroSection() {
           icon: "info",
           title: "Profile Photo Needed",
           text: "Please upload a clear profile photo to complete your registration.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
         });
         return;
       }
@@ -731,7 +731,7 @@ export default function HeroSection() {
         icon: "error",
         title: "Invalid Phone Number",
         text: "Please provide a valid phone number to complete registration.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
       // Go back to Step 2 to collect phone (for Google users) or Step 1 (for regular users)
       setRegisterStep(googleRegistrationData ? 2 : 1);
@@ -747,7 +747,7 @@ export default function HeroSection() {
         icon: "error",
         title: "Age Verification Required",
         text: "Please provide your birth year to complete registration.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
       // Go back to Step 2 to collect birthYear (for Google users) or Step 1 (for regular users)
       setRegisterStep(googleRegistrationData ? 2 : 1);
@@ -784,10 +784,10 @@ export default function HeroSection() {
           const swal = document.querySelector(".swal2-popup");
           if (swal) {
             swal.style.borderRadius = "20px";
-            swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-            swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+            swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+            swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
             swal.style.background =
-              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+              "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
             swal.style.backdropFilter = "blur(20px)";
           }
           const title = document.querySelector(".swal2-title");
@@ -795,7 +795,7 @@ export default function HeroSection() {
             title.style.color = "#1a1a1a";
             title.style.fontWeight = "700";
             title.style.fontSize = "1.5rem";
-            title.style.background = "linear-gradient(45deg, #D4AF37, #B8941F)";
+            title.style.background = "linear-gradient(45deg, #2D6A4F, #1B4332)";
             title.style.webkitBackgroundClip = "text";
             title.style.webkitTextFillColor = "transparent";
             title.style.backgroundClip = "text";
@@ -859,15 +859,15 @@ export default function HeroSection() {
             icon: "error",
             title: "Registration Failed",
             text: data.message || "Something went wrong. Please try again.",
-            confirmButtonColor: "#D4AF37",
+            confirmButtonColor: "#2D6A4F",
             didOpen: () => {
               const swal = document.querySelector(".swal2-popup");
               if (swal) {
                 swal.style.borderRadius = "20px";
-                swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-                swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+                swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+                swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
                 swal.style.background =
-                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                  "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
                 swal.style.backdropFilter = "blur(20px)";
               }
               const title = document.querySelector(".swal2-title");
@@ -876,7 +876,7 @@ export default function HeroSection() {
                 title.style.fontWeight = "700";
                 title.style.fontSize = "1.5rem";
                 title.style.background =
-                  "linear-gradient(45deg, #D4AF37, #B8941F)";
+                  "linear-gradient(45deg, #2D6A4F, #1B4332)";
                 title.style.webkitBackgroundClip = "text";
                 title.style.webkitTextFillColor = "transparent";
                 title.style.backgroundClip = "text";
@@ -906,7 +906,7 @@ export default function HeroSection() {
               text: "Your account has been created and subscription activated.",
               timer: 2000,
               showConfirmButton: false,
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
             }).then(() => {
               window.location.href = "/home";
             });
@@ -936,7 +936,7 @@ export default function HeroSection() {
                     icon: "info",
                     title: "Payment Cancelled",
                     text: "You can complete your registration and payment later.",
-                    confirmButtonColor: "#D4AF37",
+                    confirmButtonColor: "#2D6A4F",
                   });
                 },
                 callback: function (paystackResponse) {
@@ -977,7 +977,7 @@ export default function HeroSection() {
                           text: "Your account has been created and subscription activated.",
                           timer: 2000,
                           showConfirmButton: false,
-                          confirmButtonColor: "#D4AF37",
+                          confirmButtonColor: "#2D6A4F",
                         }).then(() => {
                           window.location.href = "/home";
                         });
@@ -990,7 +990,7 @@ export default function HeroSection() {
                         icon: "error",
                         title: "Verification Failed",
                         text: error.message || "Failed to verify payment. Please contact support.",
-                        confirmButtonColor: "#D4AF37",
+                        confirmButtonColor: "#2D6A4F",
                       });
                     }
                   })();
@@ -1008,7 +1008,7 @@ export default function HeroSection() {
               icon: "error",
               title: "Unexpected Response",
               text: "Unable to process registration. Please try again.",
-              confirmButtonColor: "#D4AF37",
+              confirmButtonColor: "#2D6A4F",
             });
           }
         }
@@ -1018,15 +1018,15 @@ export default function HeroSection() {
           icon: "error",
           title: "Error",
           text: "Registration failed. Please try again.",
-          confirmButtonColor: "#D4AF37",
+          confirmButtonColor: "#2D6A4F",
           didOpen: () => {
             const swal = document.querySelector(".swal2-popup");
             if (swal) {
               swal.style.borderRadius = "20px";
-              swal.style.border = "1px solid rgba(212, 175, 55, 0.3)";
-              swal.style.boxShadow = "0 20px 60px rgba(212, 175, 55, 0.25)";
+              swal.style.border = "1px solid rgba(45, 106, 79, 0.3)";
+              swal.style.boxShadow = "0 20px 60px rgba(45, 106, 79, 0.25)";
               swal.style.background =
-                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 230, 211, 0.2) 100%)";
+                "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(216, 243, 220, 0.2) 100%)";
               swal.style.backdropFilter = "blur(20px)";
             }
             const title = document.querySelector(".swal2-title");
@@ -1035,7 +1035,7 @@ export default function HeroSection() {
               title.style.fontWeight = "700";
               title.style.fontSize = "1.5rem";
               title.style.background =
-                "linear-gradient(45deg, #D4AF37, #B8941F)";
+                "linear-gradient(45deg, #2D6A4F, #1B4332)";
               title.style.webkitBackgroundClip = "text";
               title.style.webkitTextFillColor = "transparent";
               title.style.backgroundClip = "text";
@@ -1061,7 +1061,7 @@ export default function HeroSection() {
         icon: "warning",
         title: "Email Required",
         text: "Please enter the email you registered with.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
       return;
     }
@@ -1091,7 +1091,7 @@ export default function HeroSection() {
         icon: "success",
         title: "Email Sent",
         text: "We've sent a new password to your email. Please check your inbox.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       }).then(() => {
         setLoginDialogOpen(true);
       });
@@ -1102,7 +1102,7 @@ export default function HeroSection() {
         text:
           error.message ||
           "We couldn't process your request. Please try again later.",
-        confirmButtonColor: "#D4AF37",
+        confirmButtonColor: "#2D6A4F",
       });
     } finally {
       setResetLoading(false);
@@ -1140,7 +1140,7 @@ export default function HeroSection() {
           boxShadow: `
             0 20px 60px rgba(0, 0, 0, 0.2),
             0 0 0 1px rgba(255, 255, 255, 0.5) inset,
-            0 8px 32px rgba(212, 175, 55, 0.3)
+            0 8px 32px rgba(45, 106, 79, 0.3)
           `,
           display: "flex",
           flexDirection: "column",
@@ -1157,7 +1157,7 @@ export default function HeroSection() {
             boxShadow: `
               0 25px 70px rgba(0, 0, 0, 0.25),
               0 0 0 1px rgba(255, 255, 255, 0.6) inset,
-              0 10px 40px rgba(212, 175, 55, 0.4)
+              0 10px 40px rgba(45, 106, 79, 0.4)
             `,
           },
         }}
@@ -1220,10 +1220,10 @@ export default function HeroSection() {
                   '"Montserrat", "Poppins", "Manrope", "Inter", sans-serif',
                 // Enhanced gold → dark bronze gradient with more depth
                 background: `linear-gradient(135deg, 
-                  #FFD700 0%,
+                  #52B788 0%,
                   #f7c948 12%,
-                  #ffd700 24%,
-                  #d4af37 36%,
+                  #52B788 24%,
+                  #2D6A4F 36%,
                   #b88900 48%,
                   #8B6914 60%,
                   #654321 72%,
@@ -1235,7 +1235,7 @@ export default function HeroSection() {
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 textShadow:
-                  "0 6px 30px rgba(255, 215, 0, 0.4), 0 3px 15px rgba(139, 105, 20, 0.3), 0 0 40px rgba(212, 175, 55, 0.5), 0 0 60px rgba(255, 215, 0, 0.2)",
+                  "0 6px 30px rgba(255, 215, 0, 0.4), 0 3px 15px rgba(139, 105, 20, 0.3), 0 0 40px rgba(45, 106, 79, 0.5), 0 0 60px rgba(255, 215, 0, 0.2)",
                 lineHeight: { xs: 1.05, sm: 1, md: 0.95 },
                 textTransform: "uppercase",
                 filter: "drop-shadow(0 0 20px rgba(255, 215, 0, 0.6))",
@@ -1318,13 +1318,13 @@ export default function HeroSection() {
           bottom: 0,
           borderRadius: 0,
           background:
-            "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #d4af37 50%, #b8941f 75%, #8b6914 100%)",
+            "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #2D6A4F 50%, #1B4332 75%, #8b6914 100%)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
           boxShadow: `
             0 20px 60px rgba(0, 0, 0, 0.3),
             0 0 0 1px rgba(255, 255, 255, 0.2) inset,
-            0 8px 32px rgba(212, 175, 55, 0.5),
+            0 8px 32px rgba(45, 106, 79, 0.5),
             0 0 40px rgba(255, 215, 0, 0.2)
           `,
           display: "flex",
@@ -1341,7 +1341,7 @@ export default function HeroSection() {
             boxShadow: `
               0 25px 70px rgba(0, 0, 0, 0.35),
               0 0 0 1px rgba(255, 255, 255, 0.3) inset,
-              0 10px 40px rgba(212, 175, 55, 0.6),
+              0 10px 40px rgba(45, 106, 79, 0.6),
               0 0 50px rgba(255, 215, 0, 0.3)
             `,
           },
@@ -1398,10 +1398,10 @@ export default function HeroSection() {
                   textTransform: "none",
                   // Enhanced gradient with metallic finish
                   background:
-                    "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #d4af37 50%, #b8941f 75%, #8b6914 100%)",
+                    "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #2D6A4F 50%, #1B4332 75%, #8b6914 100%)",
                   border: "2px solid rgba(255, 255, 255, 0.3)",
                   boxShadow: `
-                    0 10px 40px rgba(212, 175, 55, 0.4),
+                    0 10px 40px rgba(45, 106, 79, 0.4),
                     0 0 0 1px rgba(255, 255, 255, 0.1) inset,
                     0 2px 0 rgba(255, 255, 255, 0.5) inset,
                     0 -2px 10px rgba(0, 0, 0, 0.3) inset
@@ -1441,11 +1441,11 @@ export default function HeroSection() {
                   },
                   "&:hover": {
                     background:
-                      "linear-gradient(135deg, #ffd700 0%, #f7c948 25%, #e6b800 50%, #d4af37 75%, #b8941f 100%)",
+                      "linear-gradient(135deg, #52B788 0%, #f7c948 25%, #e6b800 50%, #2D6A4F 75%, #1B4332 100%)",
                     transform: "translateY(-2px) scale(1.02)",
                     boxShadow: `
                       0 0 30px rgba(255, 215, 0, 0.6),
-                      0 15px 50px rgba(212, 175, 55, 0.5),
+                      0 15px 50px rgba(45, 106, 79, 0.5),
                       0 0 0 1px rgba(255, 255, 255, 0.2) inset,
                       0 3px 0 rgba(255, 255, 255, 0.6) inset,
                       0 -2px 15px rgba(0, 0, 0, 0.3) inset
@@ -1465,7 +1465,7 @@ export default function HeroSection() {
                     transform: "translateY(0) scale(1)",
                     boxShadow: `
                       0 0 20px rgba(255, 215, 0, 0.5),
-                      0 8px 30px rgba(212, 175, 55, 0.4),
+                      0 8px 30px rgba(45, 106, 79, 0.4),
                       0 0 0 1px rgba(255, 255, 255, 0.1) inset,
                       0 1px 0 rgba(255, 255, 255, 0.4) inset
                     `,
@@ -1504,10 +1504,10 @@ export default function HeroSection() {
                   textTransform: "none",
                   // Enhanced gradient with metallic finish
                   background:
-                    "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #d4af37 50%, #b8941f 75%, #8b6914 100%)",
+                    "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #2D6A4F 50%, #1B4332 75%, #8b6914 100%)",
                   border: "2px solid rgba(255, 255, 255, 0.3)",
                   boxShadow: `
-                    0 10px 40px rgba(212, 175, 55, 0.4),
+                    0 10px 40px rgba(45, 106, 79, 0.4),
                     0 0 0 1px rgba(255, 255, 255, 0.1) inset,
                     0 2px 0 rgba(255, 255, 255, 0.5) inset,
                     0 -2px 10px rgba(0, 0, 0, 0.3) inset
@@ -1547,11 +1547,11 @@ export default function HeroSection() {
                   },
                   "&:hover": {
                     background:
-                      "linear-gradient(135deg, #ffd700 0%, #f7c948 25%, #e6b800 50%, #d4af37 75%, #b8941f 100%)",
+                      "linear-gradient(135deg, #52B788 0%, #f7c948 25%, #e6b800 50%, #2D6A4F 75%, #1B4332 100%)",
                     transform: "translateY(-2px) scale(1.02)",
                     boxShadow: `
                       0 0 30px rgba(255, 215, 0, 0.6),
-                      0 15px 50px rgba(212, 175, 55, 0.5),
+                      0 15px 50px rgba(45, 106, 79, 0.5),
                       0 0 0 1px rgba(255, 255, 255, 0.2) inset,
                       0 3px 0 rgba(255, 255, 255, 0.6) inset,
                       0 -2px 15px rgba(0, 0, 0, 0.3) inset
@@ -1571,7 +1571,7 @@ export default function HeroSection() {
                     transform: "translateY(0) scale(1)",
                     boxShadow: `
                       0 0 20px rgba(255, 215, 0, 0.5),
-                      0 8px 30px rgba(212, 175, 55, 0.4),
+                      0 8px 30px rgba(45, 106, 79, 0.4),
                       0 0 0 1px rgba(255, 255, 255, 0.1) inset,
                       0 1px 0 rgba(255, 255, 255, 0.4) inset
                     `,
@@ -1715,10 +1715,10 @@ export default function HeroSection() {
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
             background:
-              "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #d4af37 50%, #b8941f 75%, #8b6914 100%)",
-            border: "2px solid rgba(212, 175, 55, 0.8)",
+              "linear-gradient(135deg, #f7c948 0%, #e6b800 25%, #2D6A4F 50%, #1B4332 75%, #8b6914 100%)",
+            border: "2px solid rgba(45, 106, 79, 0.8)",
             boxShadow: `
-              0 10px 40px rgba(212, 175, 55, 0.4),
+              0 10px 40px rgba(45, 106, 79, 0.4),
               0 0 0 1px rgba(255, 255, 255, 0.2) inset,
               0 2px 0 rgba(255, 255, 255, 0.4) inset,
               0 -2px 10px rgba(0, 0, 0, 0.2) inset,
@@ -1742,11 +1742,11 @@ export default function HeroSection() {
             },
             "&:hover": {
               background:
-                "linear-gradient(135deg, #ffd700 0%, #f7c948 25%, #e6b800 50%, #d4af37 75%, #b8941f 100%)",
-              borderColor: "rgba(212, 175, 55, 1)",
+                "linear-gradient(135deg, #52B788 0%, #f7c948 25%, #e6b800 50%, #2D6A4F 75%, #1B4332 100%)",
+              borderColor: "rgba(45, 106, 79, 1)",
               boxShadow: `
                 0 0 30px rgba(255, 215, 0, 0.6),
-                0 15px 50px rgba(212, 175, 55, 0.5),
+                0 15px 50px rgba(45, 106, 79, 0.5),
                 0 0 0 1px rgba(255, 255, 255, 0.3) inset,
                 0 3px 0 rgba(255, 255, 255, 0.5) inset,
                 0 -2px 15px rgba(0, 0, 0, 0.3) inset,
@@ -1817,8 +1817,8 @@ export default function HeroSection() {
             borderRadius: "20px",
             backgroundColor: "rgba(255, 255, 255, 0.98)",
             backdropFilter: "blur(24px)",
-            border: "1px solid rgba(212, 175, 55, 0.3)",
-            boxShadow: "0 30px 80px rgba(212, 175, 55, 0.25)",
+            border: "1px solid rgba(45, 106, 79, 0.3)",
+            boxShadow: "0 30px 80px rgba(45, 106, 79, 0.25)",
             maxHeight: "95vh",
             margin: "auto",
             width: { xs: "92%", sm: "86%", md: "760px" },
@@ -1831,7 +1831,7 @@ export default function HeroSection() {
             fontWeight: 700,
             fontSize: { xs: "1.3rem", sm: "1.6rem", md: "1.8rem" },
             textAlign: "center",
-            background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+            background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -2265,8 +2265,8 @@ export default function HeroSection() {
                 checked={termsChecked}
                 onChange={(event) => setTermsChecked(event.target.checked)}
                 sx={{
-                  color: "#D4AF37",
-                  "&.Mui-checked": { color: "#D4AF37" },
+                  color: "#2D6A4F",
+                  "&.Mui-checked": { color: "#2D6A4F" },
                 }}
               />
             }
@@ -2322,12 +2322,12 @@ export default function HeroSection() {
               py: 1,
               fontWeight: 600,
               textTransform: "none",
-              background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+              background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
               color: "rgba(0, 0, 0, 0.9)",
-              boxShadow: "0 10px 30px rgba(212, 175, 55, 0.3)",
+              boxShadow: "0 10px 30px rgba(45, 106, 79, 0.3)",
               "&:hover": {
-                background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                boxShadow: "0 12px 35px rgba(212, 175, 55, 0.35)",
+                background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                boxShadow: "0 12px 35px rgba(45, 106, 79, 0.35)",
                 transform: "translateY(-1px)",
               },
               "&:disabled": {
@@ -2353,8 +2353,8 @@ export default function HeroSection() {
             backgroundImage:
               "linear-gradient(135deg, rgba(255, 248, 220, 0.98) 0%, rgba(255, 236, 179, 0.95) 100%)",
             backdropFilter: "blur(20px)",
-            boxShadow: "0 20px 60px rgba(212, 175, 55, 0.3)",
-            border: "2px solid rgba(212, 175, 55, 0.3)",
+            boxShadow: "0 20px 60px rgba(45, 106, 79, 0.3)",
+            border: "2px solid rgba(45, 106, 79, 0.3)",
             maxHeight: "95vh",
             width: { xs: "90%", sm: "85%", md: "75%" },
             maxWidth: "700px",
@@ -2364,7 +2364,7 @@ export default function HeroSection() {
       >
         <DialogTitle
           sx={{
-            background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+            background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -2405,13 +2405,13 @@ export default function HeroSection() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -2421,7 +2421,7 @@ export default function HeroSection() {
                     },
                     "& .MuiInputLabel-root": {
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -2438,13 +2438,13 @@ export default function HeroSection() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -2454,7 +2454,7 @@ export default function HeroSection() {
                     },
                     "& .MuiInputLabel-root": {
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -2477,13 +2477,13 @@ export default function HeroSection() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -2493,7 +2493,7 @@ export default function HeroSection() {
                     },
                     "& .MuiInputLabel-root": {
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -2511,13 +2511,13 @@ export default function HeroSection() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -2527,7 +2527,7 @@ export default function HeroSection() {
                     },
                     "& .MuiInputLabel-root": {
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -2544,13 +2544,13 @@ export default function HeroSection() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -2560,7 +2560,7 @@ export default function HeroSection() {
                     },
                     "& .MuiInputLabel-root": {
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -2570,7 +2570,7 @@ export default function HeroSection() {
                         <IconButton
                           onClick={() => setShowPassword(!showPassword)}
                           edge="end"
-                          sx={{ color: "#D4AF37" }}
+                          sx={{ color: "#2D6A4F" }}
                         >
                           {showPassword ? <VisibilityOff /> : <Visibility />}
                         </IconButton>
@@ -2579,7 +2579,7 @@ export default function HeroSection() {
                   }}
                 />
                 <FormControl fullWidth>
-                  <InputLabel sx={{ "&.Mui-focused": { color: "#D4AF37" } }}>
+                  <InputLabel sx={{ "&.Mui-focused": { color: "#2D6A4F" } }}>
                     Gender
                   </InputLabel>
                   <Select
@@ -2593,13 +2593,13 @@ export default function HeroSection() {
                         lineHeight: 1.5,
                       },
                       "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     }}
@@ -2627,13 +2627,13 @@ export default function HeroSection() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -2643,7 +2643,7 @@ export default function HeroSection() {
                     },
                     "& .MuiInputLabel-root": {
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -2666,9 +2666,9 @@ export default function HeroSection() {
                   sx={{
                     width: "100%",
                     borderRadius: "12px",
-                    background: "rgba(212, 175, 55, 0.12)",
+                    background: "rgba(45, 106, 79, 0.12)",
                     color: "rgba(26, 26, 26, 0.9)",
-                    border: "1px solid rgba(212, 175, 55, 0.35)",
+                    border: "1px solid rgba(45, 106, 79, 0.35)",
                     fontWeight: 600,
                     textAlign: "center",
                   }}
@@ -2696,13 +2696,13 @@ export default function HeroSection() {
                         "& .MuiOutlinedInput-root": {
                           borderRadius: "12px",
                           "& fieldset": {
-                            borderColor: phoneError ? "#d32f2f" : "rgba(212, 175, 55, 0.3)",
+                            borderColor: phoneError ? "#d32f2f" : "rgba(45, 106, 79, 0.3)",
                           },
                           "&:hover fieldset": {
-                            borderColor: phoneError ? "#d32f2f" : "rgba(212, 175, 55, 0.6)",
+                            borderColor: phoneError ? "#d32f2f" : "rgba(45, 106, 79, 0.6)",
                           },
                           "&.Mui-focused fieldset": {
-                            borderColor: phoneError ? "#d32f2f" : "#D4AF37",
+                            borderColor: phoneError ? "#d32f2f" : "#2D6A4F",
                             borderWidth: "2px",
                           },
                         },
@@ -2712,7 +2712,7 @@ export default function HeroSection() {
                         },
                         "& .MuiInputLabel-root": {
                           "&.Mui-focused": {
-                            color: "#D4AF37",
+                            color: "#2D6A4F",
                           },
                         },
                       }}
@@ -2735,13 +2735,13 @@ export default function HeroSection() {
                         "& .MuiOutlinedInput-root": {
                           borderRadius: "12px",
                           "& fieldset": {
-                            borderColor: birthYearError ? "#d32f2f" : "rgba(212, 175, 55, 0.3)",
+                            borderColor: birthYearError ? "#d32f2f" : "rgba(45, 106, 79, 0.3)",
                           },
                           "&:hover fieldset": {
-                            borderColor: birthYearError ? "#d32f2f" : "rgba(212, 175, 55, 0.6)",
+                            borderColor: birthYearError ? "#d32f2f" : "rgba(45, 106, 79, 0.6)",
                           },
                           "&.Mui-focused fieldset": {
-                            borderColor: birthYearError ? "#d32f2f" : "#D4AF37",
+                            borderColor: birthYearError ? "#d32f2f" : "#2D6A4F",
                             borderWidth: "2px",
                           },
                         },
@@ -2751,7 +2751,7 @@ export default function HeroSection() {
                         },
                         "& .MuiInputLabel-root": {
                           "&.Mui-focused": {
-                            color: "#D4AF37",
+                            color: "#2D6A4F",
                           },
                         },
                       }}
@@ -2759,7 +2759,7 @@ export default function HeroSection() {
                   </>
                 )}
                 <FormControl fullWidth>
-                  <InputLabel sx={{ "&.Mui-focused": { color: "#D4AF37" } }}>
+                  <InputLabel sx={{ "&.Mui-focused": { color: "#2D6A4F" } }}>
                     Category
                   </InputLabel>
                   <Select
@@ -2773,13 +2773,13 @@ export default function HeroSection() {
                         lineHeight: 1.5,
                       },
                       "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     }}
@@ -2804,13 +2804,13 @@ export default function HeroSection() {
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "12px",
                       "& fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.3)",
+                        borderColor: "rgba(45, 106, 79, 0.3)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "rgba(212, 175, 55, 0.6)",
+                        borderColor: "rgba(45, 106, 79, 0.6)",
                       },
                       "&.Mui-focused fieldset": {
-                        borderColor: "#D4AF37",
+                        borderColor: "#2D6A4F",
                         borderWidth: "2px",
                       },
                     },
@@ -2820,7 +2820,7 @@ export default function HeroSection() {
                     },
                     "& .MuiInputLabel-root": {
                       "&.Mui-focused": {
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                       },
                     },
                   }}
@@ -2840,7 +2840,7 @@ export default function HeroSection() {
                       width: 150,
                       height: 150,
                       border: `2px dashed ${
-                        photoError ? "#d32f2f" : "rgba(212, 175, 55, 0.5)"
+                        photoError ? "#d32f2f" : "rgba(45, 106, 79, 0.5)"
                       }`,
                       borderRadius: "12px",
                       backgroundColor: photoError
@@ -2848,10 +2848,10 @@ export default function HeroSection() {
                         : "transparent",
                       transition: "all 0.2s ease",
                       "&:hover": {
-                        borderColor: photoError ? "#d32f2f" : "#D4AF37",
+                        borderColor: photoError ? "#d32f2f" : "#2D6A4F",
                         backgroundColor: photoError
                           ? "rgba(211, 47, 47, 0.08)"
-                          : "rgba(212, 175, 55, 0.1)",
+                          : "rgba(45, 106, 79, 0.1)",
                       },
                     }}
                   >
@@ -2865,7 +2865,7 @@ export default function HeroSection() {
                         }}
                       />
                     ) : (
-                      <PhotoCamera sx={{ fontSize: 60, color: "#D4AF37" }} />
+                      <PhotoCamera sx={{ fontSize: 60, color: "#2D6A4F" }} />
                     )}
                   </IconButton>
                 </label>
@@ -2921,9 +2921,9 @@ export default function HeroSection() {
                   sx={{
                     width: "100%",
                     borderRadius: "12px",
-                    background: "rgba(212, 175, 55, 0.12)",
+                    background: "rgba(45, 106, 79, 0.12)",
                     color: "rgba(26, 26, 26, 0.9)",
-                    border: "1px solid rgba(212, 175, 55, 0.35)",
+                    border: "1px solid rgba(45, 106, 79, 0.35)",
                     fontWeight: 600,
                     textAlign: "center",
                   }}
@@ -2940,7 +2940,7 @@ export default function HeroSection() {
                     sx={{
                       mb: 2,
                       "& .MuiTabs-indicator": {
-                        backgroundColor: "#D4AF37",
+                        backgroundColor: "#2D6A4F",
                         height: 3,
                         borderRadius: "3px 3px 0 0",
                       },
@@ -2951,11 +2951,11 @@ export default function HeroSection() {
                         color: "rgba(0, 0, 0, 0.6)",
                         minHeight: 48,
                         "&:hover": {
-                          color: "#D4AF37",
-                          backgroundColor: "rgba(212, 175, 55, 0.08)",
+                          color: "#2D6A4F",
+                          backgroundColor: "rgba(45, 106, 79, 0.08)",
                         },
                         "&.Mui-selected": {
-                          color: "#D4AF37",
+                          color: "#2D6A4F",
                           fontWeight: 700,
                         },
                       },
@@ -3002,14 +3002,14 @@ export default function HeroSection() {
                                 alignItems: "center",
                                 padding: 1.5,
                                 borderRadius: "16px",
-                                border: "2px solid rgba(212, 175, 55, 0.3)",
+                                border: "2px solid rgba(45, 106, 79, 0.3)",
                                 backgroundColor: "rgba(255, 255, 255, 0.9)",
-                                boxShadow: "0 4px 12px rgba(212, 175, 55, 0.15)",
+                                boxShadow: "0 4px 12px rgba(45, 106, 79, 0.15)",
                                 transition: "all 0.3s ease",
                                 "&:hover": {
                                   transform: "translateY(-4px)",
-                                  boxShadow: "0 8px 20px rgba(212, 175, 55, 0.25)",
-                                  borderColor: "rgba(212, 175, 55, 0.5)",
+                                  boxShadow: "0 8px 20px rgba(45, 106, 79, 0.25)",
+                                  borderColor: "rgba(45, 106, 79, 0.5)",
                                 },
                               }}
                             >
@@ -3029,12 +3029,12 @@ export default function HeroSection() {
                                     width: { xs: 60, sm: 70 },
                                     height: { xs: 60, sm: 70 },
                                     borderRadius: "50%",
-                                    border: "3px solid rgba(212, 175, 55, 0.4)",
+                                    border: "3px solid rgba(45, 106, 79, 0.4)",
                                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                                     overflow: "hidden",
                                     position: "relative",
                                     background:
-                                      "linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(184, 148, 31, 0.2) 100%)",
+                                      "linear-gradient(135deg, rgba(45, 106, 79, 0.3) 0%, rgba(184, 148, 31, 0.2) 100%)",
                                   }}
                                 >
                                   {/* Profile Image - Light blur, clearly visible faces */}
@@ -3063,7 +3063,7 @@ export default function HeroSection() {
                                       sx={{
                                         width: "100%",
                                         height: "100%",
-                                        background: "linear-gradient(135deg, rgba(212, 175, 55, 0.4) 0%, rgba(184, 148, 31, 0.3) 100%)",
+                                        background: "linear-gradient(135deg, rgba(45, 106, 79, 0.4) 0%, rgba(184, 148, 31, 0.3) 100%)",
                                       }}
                                     />
                                   )}
@@ -3127,7 +3127,7 @@ export default function HeroSection() {
                             py: 4,
                           }}
                         >
-                          <CircularProgress sx={{ color: "#D4AF37" }} />
+                          <CircularProgress sx={{ color: "#2D6A4F" }} />
                         </Box>
                       ) : testimonials.length === 0 ? (
                         <Box sx={{ textAlign: "center", py: 4 }}>
@@ -3171,7 +3171,7 @@ export default function HeroSection() {
                             return (
                               <React.Fragment key={testimonial.id || index}>
                                 {index > 0 && (
-                                  <Divider sx={{ borderColor: "rgba(212, 175, 55, 0.2)" }} />
+                                  <Divider sx={{ borderColor: "rgba(45, 106, 79, 0.2)" }} />
                                 )}
                                 <Box>
                                 <Box
@@ -3196,7 +3196,7 @@ export default function HeroSection() {
                                       sx={{
                                         width: { xs: 40, sm: 48 },
                                         height: { xs: 40, sm: 48 },
-                                        bgcolor: "#D4AF37",
+                                        bgcolor: "#2D6A4F",
                                         fontSize: { xs: "1rem", sm: "1.25rem" },
                                         fontWeight: 700,
                                         "& img": {
@@ -3247,7 +3247,7 @@ export default function HeroSection() {
                                           <Verified
                                             sx={{
                                               fontSize: "0.875rem",
-                                              color: "#D4AF37",
+                                              color: "#2D6A4F",
                                             }}
                                           />
                                         )}
@@ -3279,7 +3279,7 @@ export default function HeroSection() {
                                                     fontSize: "0.75rem",
                                                     color:
                                                       i < testimonial.rating
-                                                        ? "#D4AF37"
+                                                        ? "#2D6A4F"
                                                         : "rgba(0, 0, 0, 0.2)",
                                                   }}
                                                 />
@@ -3295,8 +3295,8 @@ export default function HeroSection() {
                                       elevation={0}
                                       sx={{
                                         borderRadius: "12px",
-                                        backgroundColor: "rgba(212, 175, 55, 0.05)",
-                                        border: "1px solid rgba(212, 175, 55, 0.2)",
+                                        backgroundColor: "rgba(45, 106, 79, 0.05)",
+                                        border: "1px solid rgba(45, 106, 79, 0.2)",
                                         p: { xs: 1.5, sm: 2 },
                                       }}
                                     >
@@ -3318,8 +3318,8 @@ export default function HeroSection() {
                                       elevation={0}
                                       sx={{
                                         borderRadius: "12px",
-                                        backgroundColor: "rgba(212, 175, 55, 0.05)",
-                                        border: "1px solid rgba(212, 175, 55, 0.2)",
+                                        backgroundColor: "rgba(45, 106, 79, 0.05)",
+                                        border: "1px solid rgba(45, 106, 79, 0.2)",
                                         p: { xs: 1.5, sm: 2 },
                                         textAlign: "center",
                                       }}
@@ -3765,14 +3765,14 @@ export default function HeroSection() {
                           top: -12,
                           right: 10,
                           zIndex: 1,
-                          bgcolor: "#D4AF37",
+                          bgcolor: "#2D6A4F",
                           color: "#fff",
                           px: 1.5,
                           py: 0.5,
                           borderRadius: "12px",
                           fontSize: "0.7rem",
                           fontWeight: 700,
-                          boxShadow: "0 2px 8px rgba(212, 175, 55, 0.4)",
+                          boxShadow: "0 2px 8px rgba(45, 106, 79, 0.4)",
                         }}
                       >
                         POPULAR
@@ -3789,22 +3789,22 @@ export default function HeroSection() {
                         borderRadius: "16px",
                         border:
                           formData.selectedPlan === "Gold"
-                            ? "3px solid #D4AF37"
-                            : "2px solid rgba(212, 175, 55, 0.3)",
+                            ? "3px solid #2D6A4F"
+                            : "2px solid rgba(45, 106, 79, 0.3)",
                         background:
                           formData.selectedPlan === "Gold"
-                            ? "linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%)"
+                            ? "linear-gradient(135deg, rgba(45, 106, 79, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%)"
                             : "rgba(255, 255, 255, 0.9)",
                         boxShadow:
                           formData.selectedPlan === "Gold"
-                            ? "0 4px 20px rgba(212, 175, 55, 0.4)"
+                            ? "0 4px 20px rgba(45, 106, 79, 0.4)"
                             : "0 2px 8px rgba(0, 0, 0, 0.1)",
                         transition: "all 0.3s ease",
                         position: "relative",
                         "&:hover": {
                           transform: "translateY(-2px)",
-                          boxShadow: "0 6px 20px rgba(212, 175, 55, 0.3)",
-                          borderColor: "#D4AF37",
+                          boxShadow: "0 6px 20px rgba(45, 106, 79, 0.3)",
+                          borderColor: "#2D6A4F",
                         },
                       }}
                     >
@@ -3814,7 +3814,7 @@ export default function HeroSection() {
                           variant="h6"
                           sx={{
                             fontWeight: 700,
-                            color: "#B8941F",
+                            color: "#1B4332",
                             mb: 0.5,
                           }}
                         >
@@ -3825,7 +3825,7 @@ export default function HeroSection() {
                           sx={{
                             fontWeight: 700,
                             background:
-                              "linear-gradient(45deg, #D4AF37, #B8941F)",
+                              "linear-gradient(45deg, #2D6A4F, #1B4332)",
                             backgroundClip: "text",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
@@ -3860,7 +3860,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -3885,7 +3885,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -3910,7 +3910,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -3935,7 +3935,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -3960,7 +3960,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -3985,7 +3985,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4010,7 +4010,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4035,7 +4035,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4063,7 +4063,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4088,7 +4088,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4113,7 +4113,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4138,7 +4138,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4163,7 +4163,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4188,7 +4188,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4213,7 +4213,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4238,7 +4238,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4263,7 +4263,7 @@ export default function HeroSection() {
                             >
                               <CheckCircle
                                 sx={{
-                                  color: "#D4AF37",
+                                  color: "#2D6A4F",
                                   fontSize: "1rem",
                                   mt: 0.25,
                                   flexShrink: 0,
@@ -4314,7 +4314,7 @@ export default function HeroSection() {
                     color: "primary.main",
                     "&:hover": {
                       borderColor: "primary.dark",
-                      backgroundColor: "rgba(212, 175, 55, 0.1)",
+                      backgroundColor: "rgba(45, 106, 79, 0.1)",
                     },
                   }}
                 >
@@ -4337,7 +4337,7 @@ export default function HeroSection() {
                         icon: "error",
                         title: "Missing Fields",
                         text: "Please fill in all required fields.",
-                        confirmButtonColor: "#D4AF37",
+                        confirmButtonColor: "#2D6A4F",
                         zIndex: 2000,
                         didOpen: () => {
                           const swalContainer =
@@ -4363,7 +4363,7 @@ export default function HeroSection() {
                         icon: "error",
                         title: "Invalid Phone Number",
                         text: stepPhoneError,
-                        confirmButtonColor: "#D4AF37",
+                        confirmButtonColor: "#2D6A4F",
                         zIndex: 2000,
                         didOpen: () => {
                           const swalContainer =
@@ -4390,10 +4390,10 @@ export default function HeroSection() {
                     textTransform: "none",
                     fontWeight: 600,
                     fontSize: { xs: "0.875rem", sm: "1rem" },
-                    background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                    background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                     "&:hover": {
-                      background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                      boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                      background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                      boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                     },
                   }}
                 >
@@ -4416,7 +4416,7 @@ export default function HeroSection() {
                     color: "primary.main",
                     "&:hover": {
                       borderColor: "primary.dark",
-                      backgroundColor: "rgba(212, 175, 55, 0.1)",
+                      backgroundColor: "rgba(45, 106, 79, 0.1)",
                     },
                   }}
                 >
@@ -4432,10 +4432,10 @@ export default function HeroSection() {
                     textTransform: "none",
                     fontWeight: 600,
                     fontSize: { xs: "0.875rem", sm: "1rem" },
-                    background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                    background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                     "&:hover": {
-                      background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                      boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                      background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                      boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                     },
                   }}
                 >
@@ -4458,7 +4458,7 @@ export default function HeroSection() {
                     color: "primary.main",
                     "&:hover": {
                       borderColor: "primary.dark",
-                      backgroundColor: "rgba(212, 175, 55, 0.1)",
+                      backgroundColor: "rgba(45, 106, 79, 0.1)",
                     },
                   }}
                 >
@@ -4474,10 +4474,10 @@ export default function HeroSection() {
                     textTransform: "none",
                     fontWeight: 600,
                     fontSize: { xs: "0.875rem", sm: "1rem" },
-                    background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                    background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                     "&:hover": {
-                      background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                      boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                      background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                      boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                     },
                   }}
                 >
@@ -4501,7 +4501,7 @@ export default function HeroSection() {
               "linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 248, 220, 0.95) 100%)",
             backdropFilter: "blur(30px)",
             boxShadow:
-              "0 25px 80px rgba(212, 175, 55, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.1)",
+              "0 25px 80px rgba(45, 106, 79, 0.25), 0 0 0 1px rgba(45, 106, 79, 0.1)",
             maxHeight: "95vh",
             width: { xs: "90%", sm: "500px" },
             margin: "auto",
@@ -4514,7 +4514,7 @@ export default function HeroSection() {
               left: 0,
               right: 0,
               height: "4px",
-              background: "linear-gradient(90deg, #D4AF37, #B8941F, #D4AF37)",
+              background: "linear-gradient(90deg, #2D6A4F, #1B4332, #2D6A4F)",
               backgroundSize: "200% 100%",
               animation: "shimmer 3s ease-in-out infinite",
             },
@@ -4530,7 +4530,7 @@ export default function HeroSection() {
             height: 150,
             borderRadius: "50%",
             background:
-              "linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(184, 148, 31, 0.05))",
+              "linear-gradient(135deg, rgba(45, 106, 79, 0.1), rgba(184, 148, 31, 0.05))",
             filter: "blur(40px)",
             zIndex: 0,
           }}
@@ -4544,7 +4544,7 @@ export default function HeroSection() {
             height: 120,
             borderRadius: "50%",
             background:
-              "linear-gradient(135deg, rgba(245, 230, 211, 0.3), rgba(212, 175, 55, 0.1))",
+              "linear-gradient(135deg, rgba(216, 243, 220, 0.3), rgba(45, 106, 79, 0.1))",
             filter: "blur(30px)",
             zIndex: 0,
           }}
@@ -4572,7 +4572,7 @@ export default function HeroSection() {
               <AutoAwesome
                 sx={{
                   fontSize: { xs: 28, sm: 32 },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -4582,7 +4582,7 @@ export default function HeroSection() {
               <Typography
                 variant="h4"
                 sx={{
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -4596,7 +4596,7 @@ export default function HeroSection() {
               <AutoAwesome
                 sx={{
                   fontSize: { xs: 28, sm: 32 },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
                   backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -4643,7 +4643,7 @@ export default function HeroSection() {
                         <InputAdornment position="start">
                           <Email
                             sx={{
-                              color: "#D4AF37",
+                              color: "#2D6A4F",
                               fontSize: { xs: 20, sm: 22 },
                             }}
                           />
@@ -4656,19 +4656,19 @@ export default function HeroSection() {
                         backgroundColor: "rgba(255, 255, 255, 0.8)",
                         transition: "all 0.3s ease",
                         "& fieldset": {
-                          borderColor: "rgba(212, 175, 55, 0.25)",
+                          borderColor: "rgba(45, 106, 79, 0.25)",
                           borderWidth: "1.5px",
                         },
                         "&:hover": {
                           backgroundColor: "rgba(255, 255, 255, 0.95)",
                           "& fieldset": {
-                            borderColor: "rgba(212, 175, 55, 0.5)",
+                            borderColor: "rgba(45, 106, 79, 0.5)",
                           },
                         },
                         "&.Mui-focused": {
                           backgroundColor: "rgba(255, 255, 255, 1)",
                           "& fieldset": {
-                            borderColor: "#D4AF37",
+                            borderColor: "#2D6A4F",
                             borderWidth: "2px",
                           },
                         },
@@ -4680,7 +4680,7 @@ export default function HeroSection() {
                       "& .MuiInputLabel-root": {
                         fontSize: { xs: "0.9375rem", sm: "1rem" },
                         "&.Mui-focused": {
-                          color: "#D4AF37",
+                          color: "#2D6A4F",
                           fontWeight: 500,
                         },
                       },
@@ -4703,7 +4703,7 @@ export default function HeroSection() {
                         <InputAdornment position="start">
                           <Lock
                             sx={{
-                              color: "#D4AF37",
+                              color: "#2D6A4F",
                               fontSize: { xs: 20, sm: 22 },
                             }}
                           />
@@ -4717,9 +4717,9 @@ export default function HeroSection() {
                             }
                             edge="end"
                             sx={{
-                              color: "#D4AF37",
+                              color: "#2D6A4F",
                               "&:hover": {
-                                backgroundColor: "rgba(212, 175, 55, 0.1)",
+                                backgroundColor: "rgba(45, 106, 79, 0.1)",
                               },
                             }}
                           >
@@ -4738,19 +4738,19 @@ export default function HeroSection() {
                         backgroundColor: "rgba(255, 255, 255, 0.8)",
                         transition: "all 0.3s ease",
                         "& fieldset": {
-                          borderColor: "rgba(212, 175, 55, 0.25)",
+                          borderColor: "rgba(45, 106, 79, 0.25)",
                           borderWidth: "1.5px",
                         },
                         "&:hover": {
                           backgroundColor: "rgba(255, 255, 255, 0.95)",
                           "& fieldset": {
-                            borderColor: "rgba(212, 175, 55, 0.5)",
+                            borderColor: "rgba(45, 106, 79, 0.5)",
                           },
                         },
                         "&.Mui-focused": {
                           backgroundColor: "rgba(255, 255, 255, 1)",
                           "& fieldset": {
-                            borderColor: "#D4AF37",
+                            borderColor: "#2D6A4F",
                             borderWidth: "2px",
                           },
                         },
@@ -4762,7 +4762,7 @@ export default function HeroSection() {
                       "& .MuiInputLabel-root": {
                         fontSize: { xs: "0.9375rem", sm: "1rem" },
                         "&.Mui-focused": {
-                          color: "#D4AF37",
+                          color: "#2D6A4F",
                           fontWeight: 500,
                         },
                       },
@@ -4785,14 +4785,14 @@ export default function HeroSection() {
                       }}
                       sx={{
                         fontSize: { xs: "0.8125rem", sm: "0.875rem" },
-                        color: "#D4AF37",
+                        color: "#2D6A4F",
                         fontWeight: 500,
                         cursor: "pointer",
                         background: "none",
                         border: "none",
                         textDecoration: "none",
                         "&:hover": {
-                          color: "#B8941F",
+                          color: "#1B4332",
                           textDecoration: "underline",
                         },
                       }}
@@ -4826,12 +4826,12 @@ export default function HeroSection() {
                   textTransform: "none",
                   fontWeight: 600,
                   fontSize: { xs: "1rem", sm: "1.0625rem" },
-                  background: "linear-gradient(45deg, #D4AF37, #B8941F)",
-                  boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)",
+                  background: "linear-gradient(45deg, #2D6A4F, #1B4332)",
+                  boxShadow: "0 4px 15px rgba(45, 106, 79, 0.3)",
                   transition: "all 0.3s ease",
                   "&:hover": {
-                    background: "linear-gradient(45deg, #B8941F, #D4AF37)",
-                    boxShadow: "0 8px 25px rgba(212, 175, 55, 0.4)",
+                    background: "linear-gradient(45deg, #1B4332, #2D6A4F)",
+                    boxShadow: "0 8px 25px rgba(45, 106, 79, 0.4)",
                     transform: "translateY(-2px)",
                   },
                   "&:active": {
@@ -4872,7 +4872,7 @@ export default function HeroSection() {
                   }}
                   sx={{
                     fontSize: { xs: "0.8125rem", sm: "0.875rem" },
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                     fontWeight: 600,
                     cursor: "pointer",
                     background: "none",
@@ -4882,7 +4882,7 @@ export default function HeroSection() {
                     alignItems: "center",
                     gap: 0.5,
                     "&:hover": {
-                      color: "#B8941F",
+                      color: "#1B4332",
                       textDecoration: "underline",
                     },
                   }}
@@ -4900,7 +4900,7 @@ export default function HeroSection() {
                   color: "text.secondary",
                   fontSize: { xs: "0.8125rem", sm: "0.875rem" },
                   "&:hover": {
-                    backgroundColor: "rgba(212, 175, 55, 0.05)",
+                    backgroundColor: "rgba(45, 106, 79, 0.05)",
                   },
                 }}
               >
@@ -5023,14 +5023,14 @@ export default function HeroSection() {
             borderRadius: 4,
             background: "rgba(255, 255, 255, 0.98)",
             backdropFilter: "blur(20px)",
-            border: "1px solid rgba(212, 175, 55, 0.2)",
-            boxShadow: "0 20px 40px rgba(212, 175, 55, 0.15)",
+            border: "1px solid rgba(45, 106, 79, 0.2)",
+            boxShadow: "0 20px 40px rgba(45, 106, 79, 0.15)",
           },
         }}
       >
         <DialogTitle
           sx={{
-            background: "linear-gradient(135deg, #d4af37 0%, #f4d03f 100%)",
+            background: "linear-gradient(135deg, #2D6A4F 0%, #f4d03f 100%)",
             color: "#1a1a1a",
             fontWeight: 700,
             fontSize: { xs: "1.1rem", sm: "1.3rem" },
@@ -5092,17 +5092,17 @@ export default function HeroSection() {
                 "& .MuiOutlinedInput-root": {
                   borderRadius: 3,
                   "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "rgba(212, 175, 55, 0.5)",
+                    borderColor: "rgba(45, 106, 79, 0.5)",
                   },
                   "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#D4AF37",
+                    borderColor: "#2D6A4F",
                     borderWidth: 2,
                   },
                 },
                 "& .MuiInputLabel-root": {
                   fontSize: { xs: "0.95rem", sm: "1rem" },
                   "&.Mui-focused": {
-                    color: "#D4AF37",
+                    color: "#2D6A4F",
                   },
                 },
                 "& .MuiInputBase-input": {
@@ -5152,18 +5152,18 @@ export default function HeroSection() {
                 }
                 sx={{
                   background:
-                    "linear-gradient(135deg, #d4af37 0%, #f4d03f 100%)",
+                    "linear-gradient(135deg, #2D6A4F 0%, #f4d03f 100%)",
                   borderRadius: 3,
                   px: { xs: 2.5, sm: 3 },
                   py: 1,
                   fontWeight: 600,
                   textTransform: "none",
                   color: "#1a1a1a",
-                  boxShadow: "0 4px 12px rgba(212, 175, 55, 0.3)",
+                  boxShadow: "0 4px 12px rgba(45, 106, 79, 0.3)",
                   "&:hover": {
                     background:
-                      "linear-gradient(135deg, #b8941f 0%, #d4af37 100%)",
-                    boxShadow: "0 6px 16px rgba(212, 175, 55, 0.4)",
+                      "linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%)",
+                    boxShadow: "0 6px 16px rgba(45, 106, 79, 0.4)",
                     transform: "translateY(-1px)",
                   },
                 }}

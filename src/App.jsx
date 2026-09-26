@@ -18,9 +18,8 @@ import { HelmetProvider } from "react-helmet-async";
 import PageRoutes from "./components/PageRoutes";
 
 // Lazy load components
-const Home = lazy(() => import("./pages/Home"));
+const Login = lazy(() => import("./pages/Login"));
 const PostDetail = lazy(() => import("./pages/PostDetail"));
-const Pricing = lazy(() => import("./pages/Pricing"));
 const PublicPricing = lazy(() => import("./pages/PublicPricing"));
 
 function ScrollToTop() {
@@ -59,8 +58,8 @@ function App() {
             }
           >
             <Routes>
-              {/* Public landing page */}
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Navigate to="/" replace />} />
               {/* Public pricing page - for non-logged in users (Explore button) */}
               <Route path="/explore-pricing" element={<PublicPricing />} />
               {/* Post detail page - accessible without auth for sharing */}
