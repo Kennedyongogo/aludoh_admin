@@ -27,6 +27,15 @@ import {
   ChevronLeft,
   ChevronRight,
   SupportAgentRounded,
+  DesignServicesRounded,
+  WorkRounded,
+  RateReviewRounded,
+  PhotoLibraryRounded,
+  SchoolRounded,
+  EventAvailableRounded,
+  WorkspacePremiumRounded,
+  MenuBookRounded,
+  MoreHorizRounded,
 } from "@mui/icons-material";
 import { useNavigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -38,25 +47,25 @@ const COLLAPSE_STORAGE_KEY = "navCollapsed";
 const widthTransition = "width 225ms cubic-bezier(0.4, 0, 0.6, 1)";
 const layoutTransition = `${widthTransition}, margin 225ms cubic-bezier(0.4, 0, 0.6, 1)`;
 
+// `pinned` items sit in the mobile bottom bar; the rest open from "More"
 const baseMenuItems = [
-  {
-    text: "Home",
-    icon: <Home />,
-    path: "/home",
-    mobileLabel: "Home",
-  },
-  {
-    text: "Service Requests",
-    icon: <SupportAgentRounded />,
-    path: "/service-requests",
-    mobileLabel: "Requests",
-  },
+  { text: "Home", icon: <Home />, path: "/home", mobileLabel: "Home", pinned: true },
+  { text: "Service Requests", icon: <SupportAgentRounded />, path: "/service-requests", mobileLabel: "Requests", pinned: true },
+  { text: "Training Bookings", icon: <EventAvailableRounded />, path: "/bookings", mobileLabel: "Bookings", pinned: true },
+  { group: "Website content", text: "Services", icon: <DesignServicesRounded />, path: "/services", mobileLabel: "Services", pinned: true },
+  { group: "Website content", text: "Projects", icon: <WorkRounded />, path: "/projects", mobileLabel: "Projects" },
+  { group: "Website content", text: "Testimonials", icon: <RateReviewRounded />, path: "/testimonials", mobileLabel: "Reviews" },
+  { group: "Website content", text: "Gallery", icon: <PhotoLibraryRounded />, path: "/gallery", mobileLabel: "Gallery" },
+  { group: "Website content", text: "Knowledge Center", icon: <MenuBookRounded />, path: "/knowledge", mobileLabel: "Articles" },
+  { group: "Training", text: "Courses", icon: <SchoolRounded />, path: "/courses", mobileLabel: "Courses" },
+  { group: "Training", text: "Certificates", icon: <WorkspacePremiumRounded />, path: "/certificates", mobileLabel: "Certificates" },
 ];
 
 export default function Navbar({ user, isSuspended = false, onLogout }) {
   const navigate = useNavigate();
   const location = useLocation();
   const [anchorEl, setAnchorEl] = useState(null);
+  const [moreOpen, setMoreOpen] = useState(false);
   const [collapsed, setCollapsed] = useState(
     () => localStorage.getItem(COLLAPSE_STORAGE_KEY) === "true"
   );
@@ -73,7 +82,11 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
   // Sub-pages such as /service-requests/map keep their parent item highlighted
   const isPathActive = (path) =>
     location.pathname === path || location.pathname.startsWith(`${path}/`);
-  const activeIndex = menuItems.findIndex((item) => isPathActive(item.path));
+  const pinnedItems = menuItems.filter((item) => item.pinned);
+  const moreItems = menuItems.filter((item) => !item.pinned);
+  const pinnedIndex = pinnedItems.findIndex((item) => isPathActive(item.path));
+  const moreActive = moreItems.some((item) => isPathActive(item.path));
+  const bottomValue = moreActive ? "more" : pinnedIndex === -1 ? 0 : pinnedIndex;
 
   const handleProfileMenuOpen = (event) => setAnchorEl(event.currentTarget);
   const handleProfileMenuClose = () => setAnchorEl(null);
@@ -199,11 +212,32 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
 
       <Divider sx={{ borderColor: "rgba(45, 106, 79, 0.2)" }} />
 
-      <List sx={{ flexGrow: 1, px: collapsed ? 1 : 2, pt: 2 }}>
-        {menuItems.map((item) => {
+      <List sx={{ flexGrow: 1, px: collapsed ? 1 : 2, pt: 2, overflowY: "auto", overflowX: "hidden" }}>
+        {menuItems.map((item, index) => {
           const isActive = isPathActive(item.path);
+          const startsGroup = item.group && item.group !== menuItems[index - 1]?.group;
           return (
-            <ListItem key={item.text} disablePadding sx={{ mb: 1 }}>
+            <React.Fragment key={item.text}>
+            {startsGroup &&
+              (collapsed ? (
+                <Divider sx={{ my: 1, borderColor: "rgba(45, 106, 79, 0.15)" }} />
+              ) : (
+                <Typography
+                  sx={{
+                    px: 2,
+                    pt: 1.5,
+                    pb: 0.75,
+                    fontSize: "0.68rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "#40916C",
+                  }}
+                >
+                  {item.group}
+                </Typography>
+              ))}
+            <ListItem disablePadding sx={{ mb: 0.5 }}>
               <Tooltip
                 title={collapsed ? item.text : ""}
                 placement="right"
@@ -219,7 +253,7 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
                       ? "rgba(45, 106, 79, 0.15)"
                       : "transparent",
                     "&:hover": { backgroundColor: "rgba(45, 106, 79, 0.1)" },
-                    py: 1.5,
+                    py: 1.1,
                     px: collapsed ? 0 : 2,
                   }}
                 >
@@ -250,6 +284,7 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
                 </ListItemButton>
               </Tooltip>
             </ListItem>
+            </React.Fragment>
           );
         })}
         {menuItems.length === 0 && !collapsed && (
@@ -499,8 +534,11 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
           elevation={3}
         >
           <BottomNavigation
-            value={activeIndex === -1 ? 0 : activeIndex}
-            onChange={(event, newValue) => navigate(menuItems[newValue].path)}
+            value={bottomValue}
+            onChange={(event, newValue) => {
+              if (newValue === "more") setMoreOpen(true);
+              else navigate(pinnedItems[newValue].path);
+            }}
             showLabels
             sx={{
               backgroundColor: "transparent",
@@ -521,7 +559,7 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
               },
             }}
           >
-            {menuItems.map((item, index) => (
+            {pinnedItems.map((item, index) => (
               <BottomNavigationAction
                 key={item.text}
                 label={item.mobileLabel || item.text}
@@ -529,9 +567,73 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
                 value={index}
               />
             ))}
+            {moreItems.length > 0 && (
+              <BottomNavigationAction
+                label="More"
+                icon={<MoreHorizRounded />}
+                value="more"
+                onClick={() => setMoreOpen(true)}
+              />
+            )}
           </BottomNavigation>
         </Paper>
       )}
+
+      <Drawer
+        anchor="bottom"
+        open={moreOpen}
+        onClose={() => setMoreOpen(false)}
+        sx={{ display: { md: "none" } }}
+        PaperProps={{ sx: { borderTopLeftRadius: 22, borderTopRightRadius: 22, pb: 2 } }}
+      >
+        <Box sx={{ width: 40, height: 4, borderRadius: 2, bgcolor: "rgba(45, 106, 79, 0.25)", mx: "auto", mt: 1.25, mb: 1 }} />
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+            gap: 1,
+            px: 2,
+            pb: 1,
+          }}
+        >
+          {moreItems.map((item) => {
+            const isActive = isPathActive(item.path);
+            return (
+              <Box
+                key={item.text}
+                component="button"
+                type="button"
+                onClick={() => {
+                  setMoreOpen(false);
+                  navigate(item.path);
+                }}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: 0.75,
+                  py: 1.75,
+                  px: 1,
+                  border: "1px solid",
+                  borderColor: isActive ? "rgba(45, 106, 79, 0.35)" : "rgba(45, 106, 79, 0.12)",
+                  borderRadius: "16px",
+                  bgcolor: isActive ? "rgba(45, 106, 79, 0.1)" : "#fff",
+                  color: isActive ? "#2D6A4F" : "rgba(26, 26, 26, 0.75)",
+                  font: "inherit",
+                  fontSize: "0.78rem",
+                  fontWeight: isActive ? 700 : 500,
+                  cursor: "pointer",
+                  textAlign: "center",
+                  "& svg": { color: isActive ? "#2D6A4F" : "#40916C" },
+                }}
+              >
+                {item.icon}
+                {item.text}
+              </Box>
+            );
+          })}
+        </Box>
+      </Drawer>
     </Box>
   );
 }

@@ -18,6 +18,7 @@ const endSession = () => {
 
 export const adminRequest = async (path, { method = "GET", body } = {}) => {
   const token = localStorage.getItem("token");
+  const isForm = body instanceof FormData;
   let response;
   try {
     response = await fetchWithTimeout(
@@ -26,12 +27,12 @@ export const adminRequest = async (path, { method = "GET", body } = {}) => {
         method,
         headers: {
           Accept: "application/json",
-          ...(body && { "Content-Type": "application/json" }),
+          ...(body && !isForm && { "Content-Type": "application/json" }),
           ...(token && { Authorization: `Bearer ${token}` }),
         },
-        body: body ? JSON.stringify(body) : undefined,
+        body: body ? (isForm ? body : JSON.stringify(body)) : undefined,
       },
-      15000
+      isForm ? 60000 : 15000
     );
   } catch {
     throw new ApiError(OFFLINE_MESSAGE, 0);
@@ -58,6 +59,14 @@ export const adminRequest = async (path, { method = "GET", body } = {}) => {
     throw new ApiError(data.message || "Request failed", response.status);
   }
   return data;
+};
+
+// Returns the stored paths, e.g. ["/uploads/projects/abc.jpg"]
+export const uploadImages = async (folder, files) => {
+  const form = new FormData();
+  Array.from(files).forEach((file) => form.append("images", file));
+  const { data } = await adminRequest(`/api/uploads/${folder}`, { method: "POST", body: form });
+  return data.map((item) => item.path);
 };
 
 export const buildQuery = (params) => {

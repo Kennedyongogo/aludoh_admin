@@ -20,6 +20,22 @@ import Navbar from "./Navbar";
 import Dashboard from "../pages/Dashboard";
 import ServiceRequests from "../pages/ServiceRequests";
 import ServiceRequestsMap from "../pages/ServiceRequestsMap";
+import Services from "../pages/Services";
+import ServiceDetail from "../pages/ServiceDetail";
+import Projects from "../pages/Projects";
+import ProjectDetail from "../pages/ProjectDetail";
+import Testimonials from "../pages/Testimonials";
+import TestimonialDetail from "../pages/TestimonialDetail";
+import Gallery from "../pages/Gallery";
+import GalleryDetail from "../pages/GalleryDetail";
+import Knowledge from "../pages/Knowledge";
+import ArticleDetail from "../pages/ArticleDetail";
+import Courses from "../pages/Courses";
+import CourseDetail from "../pages/CourseDetail";
+import Bookings from "../pages/Bookings";
+import BookingDetail from "../pages/BookingDetail";
+import Certificates from "../pages/Certificates";
+import CertificateDetail from "../pages/CertificateDetail";
 import Wallet from "../pages/Wallet";
 import SuspensionGate from "./Suspension/SuspensionGate";
 import SuspensionAppealModal from "./Suspension/SuspensionAppealModal";
@@ -619,7 +635,8 @@ function PageRoutes() {
           minHeight: { xs: "calc(100vh - 64px)", sm: "calc(100vh - 72px)" },
           width: "100%",
           maxWidth: "100%",
-          overflowX: "hidden",
+          // clip (unlike hidden) doesn't create a scroll container, so position: sticky keeps working
+          overflowX: "clip",
           boxSizing: "border-box",
         }}
       >
@@ -638,6 +655,38 @@ function PageRoutes() {
             <Route path="home" element={<Dashboard />} />
             <Route path="service-requests" element={<ServiceRequests />} />
             <Route path="service-requests/map" element={<ServiceRequestsMap />} />
+            <Route path="services" element={<Services />} />
+            <Route path="services/new" element={<ServiceDetail />} />
+            <Route path="services/:id" element={<ServiceDetail />} />
+            <Route path="services/:id/edit" element={<ServiceDetail />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="projects/new" element={<ProjectDetail />} />
+            <Route path="projects/:id" element={<ProjectDetail />} />
+            <Route path="projects/:id/edit" element={<ProjectDetail />} />
+            <Route path="testimonials" element={<Testimonials />} />
+            <Route path="testimonials/new" element={<TestimonialDetail />} />
+            <Route path="testimonials/:id" element={<TestimonialDetail />} />
+            <Route path="testimonials/:id/edit" element={<TestimonialDetail />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="gallery/new" element={<GalleryDetail />} />
+            <Route path="gallery/:id" element={<GalleryDetail />} />
+            <Route path="gallery/:id/edit" element={<GalleryDetail />} />
+            <Route path="knowledge" element={<Knowledge />} />
+            <Route path="knowledge/new" element={<ArticleDetail />} />
+            <Route path="knowledge/:id" element={<ArticleDetail />} />
+            <Route path="knowledge/:id/edit" element={<ArticleDetail />} />
+            <Route path="courses" element={<Courses />} />
+            <Route path="courses/new" element={<CourseDetail />} />
+            <Route path="courses/:id" element={<CourseDetail />} />
+            <Route path="courses/:id/edit" element={<CourseDetail />} />
+            <Route path="bookings" element={<Bookings />} />
+            <Route path="bookings/new" element={<BookingDetail />} />
+            <Route path="bookings/:id" element={<BookingDetail />} />
+            <Route path="bookings/:id/edit" element={<BookingDetail />} />
+            <Route path="certificates" element={<Certificates />} />
+            <Route path="certificates/new" element={<CertificateDetail />} />
+            <Route path="certificates/:id" element={<CertificateDetail />} />
+            <Route path="certificates/:id/edit" element={<CertificateDetail />} />
             <Route
               path="wallet"
               element={<Wallet user={user} setUser={setUser} />}
