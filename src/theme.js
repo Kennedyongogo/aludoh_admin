@@ -82,6 +82,21 @@ const theme = createTheme({
   shape: {
     borderRadius: 16, // Rounded corners throughout
   },
+  components: {
+    MuiButtonBase: {
+      defaultProps: { disableRipple: true },
+      styleOverrides: {
+        root: { "&:focus, &.Mui-focusVisible": { outline: "none" } },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          "&:hover, &:active, &.Mui-focusVisible": { backgroundColor: "transparent" },
+        },
+      },
+    },
+  },
 });
 
 export { theme };

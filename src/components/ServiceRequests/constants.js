@@ -37,6 +37,22 @@ export const HANDLER_FILTERS = [
   { value: "unassigned", label: "Unassigned" },
 ];
 
+// How confident the automatic lookup of the typed location is
+export const GEO_STATUSES = {
+  found: { label: "Exact match", bg: GREEN.mist, fg: GREEN.deep },
+  approximate: { label: "Approximate", bg: "#FFF4DA", fg: "#8A5A00" },
+  not_found: { label: "Not found", bg: "#FDECEA", fg: "#9B2C21" },
+  failed: { label: "Lookup failed", bg: "#FDECEA", fg: "#9B2C21" },
+  pending: { label: "Finding location…", bg: "#EEF2F0", fg: "#44524B" },
+};
+
+export const findGeoStatus = (value) => GEO_STATUSES[value] || GEO_STATUSES.pending;
+
+export const formatDistance = (meters) => {
+  if (!meters) return "";
+  return meters < 1000 ? `${Math.round(meters / 100) * 100} m` : `${Math.round(meters / 1000)} km`;
+};
+
 export const findStatus = (value) =>
   STATUSES.find((s) => s.value === value) || STATUSES[0];
 

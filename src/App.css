@@ -10,6 +10,8 @@
 /* Prevent black flash when SweetAlert closes */
 .swal2-container {
   background-color: rgba(0, 0, 0, 0.4) !important;
+  /* Above MUI dialogs and drawers (z-index 1300) so confirmations are never hidden behind them */
+  z-index: 2000 !important;
 }
 
 .swal2-container.swal2-backdrop-show {
@@ -19,6 +21,12 @@
 .swal2-container.swal2-backdrop-hide {
   background-color: transparent !important;
   transition: background-color 0.1s ease-out !important;
+}
+
+.swal2-popup button:focus,
+.swal2-popup button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* Force transparent header */

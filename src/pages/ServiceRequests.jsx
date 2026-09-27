@@ -27,12 +27,14 @@ import {
   ChevronRightRounded,
   ClearRounded,
   InboxRounded,
+  MapRounded,
   SearchRounded,
 } from "@mui/icons-material";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 import { adminRequest, buildQuery } from "../utils/adminApi";
 import { PriorityChip, StatusChip } from "../components/ServiceRequests/Badges";
-import ServiceRequestDrawer from "../components/ServiceRequests/ServiceRequestDrawer";
+import ServiceRequestDialog from "../components/ServiceRequests/ServiceRequestDialog";
 import {
   GREEN,
   HANDLER_FILTERS,
@@ -288,6 +290,7 @@ export default function ServiceRequests() {
 
   const [admins, setAdmins] = useState([]);
   const [openId, setOpenId] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -375,16 +378,35 @@ export default function ServiceRequests() {
         <title>Service requests | Mcaludoh Consultancy Admin</title>
       </Helmet>
 
-      <Box sx={{ mb: 3 }}>
-        <Typography
-          component="h1"
-          sx={{ fontWeight: 700, fontSize: { xs: "1.45rem", md: "1.85rem" }, color: GREEN.deep }}
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 3 }}>
+        <Box sx={{ flexGrow: 1, minWidth: 0 }}>
+          <Typography
+            component="h1"
+            sx={{ fontWeight: 700, fontSize: { xs: "1.45rem", md: "1.85rem" }, color: GREEN.deep }}
+          >
+            Service requests
+          </Typography>
+          <Typography sx={{ color: "text.secondary", fontSize: "0.82rem" }}>
+            Requests from the public website
+          </Typography>
+        </Box>
+        <Button
+          variant="outlined"
+          onClick={() => navigate("/service-requests/map")}
+          startIcon={<MapRounded />}
+          sx={{
+            flexShrink: 0,
+            textTransform: "none",
+            fontWeight: 600,
+            borderRadius: "12px",
+            color: GREEN.main,
+            borderColor: "rgba(45, 106, 79, 0.35)",
+            bgcolor: "#fff",
+            "&:hover": { borderColor: GREEN.main, bgcolor: "#fff" },
+          }}
         >
-          Service requests
-        </Typography>
-        <Typography sx={{ color: "text.secondary", fontSize: "0.92rem" }}>
-          Requests submitted from the public website. Open one to respond and update its status.
-        </Typography>
+          View locations
+        </Button>
       </Box>
 
       <StatsLayout carousel={!isDesktop}>
@@ -541,6 +563,11 @@ export default function ServiceRequests() {
                       {row.location && (
                         <Typography variant="caption" noWrap sx={{ color: "text.secondary", display: "block" }}>
                           {row.location}
+                          {row.geo_county && !row.location.toLowerCase().includes(row.geo_county.toLowerCase()) && (
+                            <Box component="span" sx={{ color: GREEN.main, fontWeight: 600 }}>
+                              {" "}· {row.geo_county} County
+                            </Box>
+                          )}
                         </Typography>
                       )}
                     </TableCell>
@@ -614,7 +641,7 @@ export default function ServiceRequests() {
         />
       </Paper>
 
-      <ServiceRequestDrawer
+      <ServiceRequestDialog
         requestId={openId}
         admins={admins}
         onClose={() => setOpenId(null)}

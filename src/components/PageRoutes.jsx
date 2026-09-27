@@ -19,6 +19,7 @@ import { fetchWithTimeout } from "../utils/fetchWithTimeout";
 import Navbar from "./Navbar";
 import Dashboard from "../pages/Dashboard";
 import ServiceRequests from "../pages/ServiceRequests";
+import ServiceRequestsMap from "../pages/ServiceRequestsMap";
 import Wallet from "../pages/Wallet";
 import SuspensionGate from "./Suspension/SuspensionGate";
 import SuspensionAppealModal from "./Suspension/SuspensionAppealModal";
@@ -614,7 +615,8 @@ function PageRoutes() {
           mt: { xs: 8, sm: 9 },
           pb: { xs: 10, md: 3 },
           backgroundColor: "#FAFAFA",
-          minHeight: "100vh",
+          // mt already offsets the fixed app bar, so subtract it to avoid a needless scroll
+          minHeight: { xs: "calc(100vh - 64px)", sm: "calc(100vh - 72px)" },
           width: "100%",
           maxWidth: "100%",
           overflowX: "hidden",
@@ -635,6 +637,7 @@ function PageRoutes() {
           <Routes>
             <Route path="home" element={<Dashboard />} />
             <Route path="service-requests" element={<ServiceRequests />} />
+            <Route path="service-requests/map" element={<ServiceRequestsMap />} />
             <Route
               path="wallet"
               element={<Wallet user={user} setUser={setUser} />}

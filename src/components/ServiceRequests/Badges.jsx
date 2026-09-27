@@ -1,6 +1,6 @@
 import React from "react";
 import { Chip } from "@mui/material";
-import { findPriority, findStatus } from "./constants";
+import { findGeoStatus, findPriority, findStatus } from "./constants";
 
 const chipSx = (option) => ({
   bgcolor: option.bg,
@@ -13,6 +13,11 @@ const chipSx = (option) => ({
 
 export function StatusChip({ status, sx }) {
   const option = findStatus(status);
+  return <Chip label={option.label} size="small" sx={{ ...chipSx(option), ...sx }} />;
+}
+
+export function GeoChip({ status, sx }) {
+  const option = findGeoStatus(status);
   return <Chip label={option.label} size="small" sx={{ ...chipSx(option), ...sx }} />;
 }
 

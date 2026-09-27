@@ -70,9 +70,10 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
   };
 
   const menuItems = isSuspended ? [] : baseMenuItems;
-  const activeIndex = menuItems.findIndex(
-    (item) => item.path === location.pathname
-  );
+  // Sub-pages such as /service-requests/map keep their parent item highlighted
+  const isPathActive = (path) =>
+    location.pathname === path || location.pathname.startsWith(`${path}/`);
+  const activeIndex = menuItems.findIndex((item) => isPathActive(item.path));
 
   const handleProfileMenuOpen = (event) => setAnchorEl(event.currentTarget);
   const handleProfileMenuClose = () => setAnchorEl(null);
@@ -185,7 +186,6 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
               borderRadius: collapsed ? "8px" : "10px",
               width: collapsed ? 24 : 32,
               height: collapsed ? 24 : 32,
-              "&:hover": { backgroundColor: "rgba(45, 106, 79, 0.1)" },
             }}
           >
             {collapsed ? (
@@ -201,7 +201,7 @@ export default function Navbar({ user, isSuspended = false, onLogout }) {
 
       <List sx={{ flexGrow: 1, px: collapsed ? 1 : 2, pt: 2 }}>
         {menuItems.map((item) => {
-          const isActive = location.pathname === item.path;
+          const isActive = isPathActive(item.path);
           return (
             <ListItem key={item.text} disablePadding sx={{ mb: 1 }}>
               <Tooltip
